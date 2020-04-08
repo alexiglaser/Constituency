@@ -4,18 +4,10 @@
 
 The idea behind this project is to see how a proportional representation (PR) system would have altered results in the last UK general election. The plan is to merge neighbouring constituencies in the UK into 'super' constituencies with 2 / 3 / 4 / etc of them merged together into a larger one and use the D'Hondt method to allocate seats in this 'super' constituency.
 
-The reason for using the D'Hondt method is that it can be applied to the results of UK general elections as only one vote is allowed, as opposed to other PR systems where we have multiple votes, e.g. STV or combined constituency / regional seats as in Germany's voting system.
-
-We will only merge constituencies in the same region (e.g. Scotland, East Midlands, etc) so:
-1. 'regional' parties, like Plaid Cymru and the SNP get properly allocated
-1. it will reduce the combinatorial problem massively 
-
-The way to merge the constituencies will be to using the [Exact Cover](https://en.wikipedia.org/wiki/Exact_cover) problem and [Knuth's Algorithm X](https://en.wikipedia.org/wiki/Knuth%27s_Algorithm_X) to solve it.
-
 ### Motivation
 After the 2019 UK general election an argument appeared in [Wales online](https://www.walesonline.co.uk/news/politics/proportional-representation-general-election-votes-17414366?_ga=2.214928336.650232768.1586343291-62203819.1586343291) suggesting that if the UK adopted a PR system the seat allocation of parliament would look as follows:
 
-![Seat numbers of FPTP against PR]('Constituency/seat_allocation.png')
+![Seat numbers of FPTP against PR](seat_allocation.png)
 
 The seat numbers under PR were calculated by multiplying the percentage of votes of votes obtained by each politcal party by the total number of seats in the UK parliament (650), though note that the percentages used in these calculations have since been revised [https://en.wikipedia.org/wiki/2019_United_Kingdom_general_election]. These figures are based on nationwide PR but there are certain caveats most notably it has not included a  a minimum threshold, below which any party cannot be allocated a seat. This can vary but if it were set at 5% nationwide then that would remove 74 seats from the above analysis (as well as all SNP seats). More likey there would be some 'regional' allowance for the SNP, Plaid Cymru and the parties in NI to be allocated seats, however it would still be likely mean that there would be no MPs from the Green party.
 
