@@ -15,7 +15,7 @@ The way to merge the constituencies will be to using the [Exact Cover](https://e
 ### Motivation
 After the 2019 UK general election an argument appeared in [Wales online](https://www.walesonline.co.uk/news/politics/proportional-representation-general-election-votes-17414366?_ga=2.214928336.650232768.1586343291-62203819.1586343291) suggesting that if the UK adopted a PR system the seat allocation of parliament would look as follows:
 
-![Seat numbers of FPTP against PR]('seat_allocation.png')
+![Seat numbers of FPTP against PR]('Constituency/seat_allocation.png')
 
 The seat numbers under PR were calculated by multiplying the percentage of votes of votes obtained by each politcal party by the total number of seats in the UK parliament (650), though note that the percentages used in these calculations have since been revised [https://en.wikipedia.org/wiki/2019_United_Kingdom_general_election]. These figures are based on nationwide PR but there are certain caveats most notably it has not included a  a minimum threshold, below which any party cannot be allocated a seat. This can vary but if it were set at 5% nationwide then that would remove 74 seats from the above analysis (as well as all SNP seats). More likey there would be some 'regional' allowance for the SNP, Plaid Cymru and the parties in NI to be allocated seats, however it would still be likely mean that there would be no MPs from the Green party.
 
