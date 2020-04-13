@@ -32,5 +32,5 @@ Whilst multiple MPs for a constituiency might seem controversial it has a long h
 To form the merged constituencies we will use the [Exact Cover](https://en.wikipedia.org/wiki/Exact_cover) problem and [Knuth's Algorithm X](https://en.wikipedia.org/wiki/Knuth%27s_Algorithm_X) to solve it.
 
 Resources used in this project:
-The shapefile were obtained from [data.gov.uk](https://data.gov.uk/dataset/09762279-a9cf-49ce-b035-809c91ba4214/westminster-parliamentary-constituencies-december-2017-uk-bfc).
-Election results were taken from the R package [`parlitools`](https://github.com/evanodell/parlitools).
+1. The shapefiles were obtained from [data.gov.uk](https://data.gov.uk/dataset/09762279-a9cf-49ce-b035-809c91ba4214/westminster-parliamentary-constituencies-december-2017-uk-bfc).
+1. Election results were taken from the R package [`parlitools`](https://github.com/evanodell/parlitools).
