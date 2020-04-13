@@ -27,7 +27,7 @@ The method that is going to be used is as follows:
 1. the results from these merged constituencies will be aggregated and the D'Hondt method will be applied to these merged constituencies.
 1. as the merging process will be a random process we will run the above steps repeatedly.
 
-Whilst multiple MPs for a constituiency might seem controversial it has a long history in the UK parliament with multi-member constituencies only being abolished in [1948](https://en.wikipedia.org/wiki/Multi-member_constituencies_in_the_Parliament_of_the_United_Kingdom). At the 1945 general election 39 MPs (out of 640) represented multi-member constituencies [source])https://en.wikipedia.org/wiki/List_of_MPs_elected_in_the_1945_United_Kingdom_general_election).
+Whilst multiple MPs for a constituiency might seem controversial it has a long history in the UK parliament with multi-member constituencies only being abolished in [1948](https://en.wikipedia.org/wiki/Multi-member_constituencies_in_the_Parliament_of_the_United_Kingdom). At the 1945 general election 39 MPs (out of 640) represented multi-member constituencies [source](https://en.wikipedia.org/wiki/List_of_MPs_elected_in_the_1945_United_Kingdom_general_election).
 
 To form the merged constituencies we will use the [Exact Cover](https://en.wikipedia.org/wiki/Exact_cover) problem and [Knuth's Algorithm X](https://en.wikipedia.org/wiki/Knuth%27s_Algorithm_X) to solve it.
 
