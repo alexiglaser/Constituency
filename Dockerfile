@@ -20,8 +20,8 @@ RUN conda install --quiet --yes \
     'seaborn=0.10.0'
 
 # install latest Juipyterlab
-RUN pip install 'jupyterlab==1.2.4a0'
-#RUN pip install 'jupyterlab==2.0.0a0'
+# RUN pip install 'jupyterlab==1.2.4a0'
+RUN pip install 'jupyterlab==2.1.1'
 
 # switching back to jovyan
 USER jovyan
