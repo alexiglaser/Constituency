@@ -3,9 +3,14 @@
 As stated before we will to form the merged constituencies we will use the [Exact Cover](https://en.wikipedia.org/wiki/Exact_cover) problem and [Knuth's Algorithm X](https://en.wikipedia.org/wiki/Knuth%27s_Algorithm_X) to solve it. In order to speed things up we found taht using a [PyPy](https://en.wikipedia.org/wiki/PyPy) kernel sped things up considerably (up to 7 times fast for some of the larger problems). As the PyPy kernel is a different implementation of Python we needed to have a separate set up for this part of the project.
 
 1. Once the Docker container has been built create and run the container instance 
-```docker run -it -p 8888:8888 -v "$PWD":/home/work <TAG> /bin/bash```
-    where "<TAG>" is the tag name given to the container.
-1. launch jupyter notebook server inside the container: ```jupyter notebook --allow-root --ip=0.0.0.0 --no-browser```
+```
+docker run -it -p 8888:8888 -v "$PWD":/home/work <TAG> /bin/bash
+```
+    where "TAG" is the tag name given to the container.
+1. launch jupyter notebook server inside the container: 
+```
+jupyter notebook --allow-root --ip=0.0.0.0 --no-browser
+```
 1. Open the notebook in the usual manner. Once there go to the 'home/work/' folder which should have mounted your local directory.
 1. To check if the PyPy kernel is running, open a notebook and run the following command:
 ```
