@@ -1,0 +1,1477 @@
+region,pairing,name1,name2
+East,1,Basildon and Billericay,Brentwood and Ongar
+East,2,Basildon and Billericay,Maldon
+East,3,Basildon and Billericay,Rayleigh and Wickford
+East,4,Basildon and Billericay,South Basildon and East Thurrock
+East,5,Bedford,Mid Bedfordshire
+East,6,Bedford,North East Bedfordshire
+East,7,Braintree,Harwich and North Essex
+East,8,Braintree,Saffron Walden
+East,9,Braintree,South Suffolk
+East,10,Braintree,South East Cambridgeshire
+East,11,Braintree,West Suffolk
+East,12,Braintree,Witham
+East,13,Brentwood and Ongar,Epping Forest
+East,14,Brentwood and Ongar,Harlow
+East,15,Brentwood and Ongar,Maldon
+East,16,Brentwood and Ongar,Saffron Walden
+East,17,Brentwood and Ongar,South Basildon and East Thurrock
+East,18,Broadland,Great Yarmouth
+East,19,Broadland,Mid Norfolk
+East,20,Broadland,Norwich North
+East,21,Broadland,North West Norfolk
+East,22,Broadland,North Norfolk
+East,23,Broadland,South Norfolk
+East,24,Broxbourne,Epping Forest
+East,25,Broxbourne,Harlow
+East,26,Broxbourne,Hertford and Stortford
+East,27,Broxbourne,Hertsmere
+East,28,Broxbourne,Welwyn Hatfield
+East,29,Bury St. Edmunds,Central Suffolk and North Ipswich
+East,30,Bury St. Edmunds,South West Norfolk
+East,31,Bury St. Edmunds,South Norfolk
+East,32,Bury St. Edmunds,South Suffolk
+East,33,Bury St. Edmunds,West Suffolk
+East,34,Cambridge,South Cambridgeshire
+East,35,Cambridge,South East Cambridgeshire
+East,36,Castle Point,Rayleigh and Wickford
+East,37,Castle Point,Southend West
+East,38,Castle Point,South Basildon and East Thurrock
+East,39,Central Suffolk and North Ipswich,Ipswich
+East,40,Central Suffolk and North Ipswich,South Norfolk
+East,41,Central Suffolk and North Ipswich,South Suffolk
+East,42,Central Suffolk and North Ipswich,Suffolk Coastal
+East,43,Central Suffolk and North Ipswich,Waveney
+East,44,Chelmsford,Maldon
+East,45,Chelmsford,Saffron Walden
+East,46,Clacton,Harwich and North Essex
+East,47,Colchester,Harwich and North Essex
+East,48,Colchester,Witham
+East,49,Epping Forest,Harlow
+East,50,Great Yarmouth,North Norfolk
+East,51,Great Yarmouth,Waveney
+East,52,Harlow,Hertford and Stortford
+East,53,Harlow,Saffron Walden
+East,54,Harwich and North Essex,South Suffolk
+East,55,Harwich and North Essex,Witham
+East,56,Hemel Hempstead,Hitchin and Harpenden
+East,57,Hemel Hempstead,Luton South
+East,58,Hemel Hempstead,South West Hertfordshire
+East,59,Hemel Hempstead,South West Bedfordshire
+East,60,Hemel Hempstead,St. Albans
+East,61,Hemel Hempstead,Watford
+East,62,Huntingdon,North West Cambridgeshire
+East,63,Huntingdon,North East Bedfordshire
+East,64,Huntingdon,South Cambridgeshire
+East,65,Hertford and Stortford,North East Hertfordshire
+East,66,Hertford and Stortford,Saffron Walden
+East,67,Hertford and Stortford,Welwyn Hatfield
+East,68,Hertsmere,St. Albans
+East,69,Hertsmere,Watford
+East,70,Hertsmere,Welwyn Hatfield
+East,71,Hitchin and Harpenden,Luton South
+East,72,Hitchin and Harpenden,Mid Bedfordshire
+East,73,Hitchin and Harpenden,North East Bedfordshire
+East,74,Hitchin and Harpenden,North East Hertfordshire
+East,75,Hitchin and Harpenden,St. Albans
+East,76,Hitchin and Harpenden,Stevenage
+East,77,Hitchin and Harpenden,Welwyn Hatfield
+East,78,Ipswich,South Suffolk
+East,79,Ipswich,Suffolk Coastal
+East,80,Luton North,Luton South
+East,81,Luton North,Mid Bedfordshire
+East,82,Luton North,South West Bedfordshire
+East,83,Luton South,Mid Bedfordshire
+East,84,Luton South,South West Bedfordshire
+East,85,Maldon,Rayleigh and Wickford
+East,86,Maldon,Saffron Walden
+East,87,Maldon,Witham
+East,88,Mid Bedfordshire,North East Bedfordshire
+East,89,Mid Bedfordshire,South West Bedfordshire
+East,90,Mid Norfolk,North West Norfolk
+East,91,Mid Norfolk,South West Norfolk
+East,92,Mid Norfolk,South Norfolk
+East,93,Norwich North,Norwich South
+East,94,Norwich North,South Norfolk
+East,95,Norwich South,South Norfolk
+East,96,Peterborough,North West Cambridgeshire
+East,97,Peterborough,North East Cambridgeshire
+East,98,North West Cambridgeshire,North East Cambridgeshire
+East,99,North West Cambridgeshire,South Cambridgeshire
+East,100,North West Cambridgeshire,South East Cambridgeshire
+East,101,North West Norfolk,North Norfolk
+East,102,North West Norfolk,South West Norfolk
+East,103,North East Bedfordshire,North East Hertfordshire
+East,104,North East Bedfordshire,South Cambridgeshire
+East,105,North East Cambridgeshire,South West Norfolk
+East,106,North East Cambridgeshire,South East Cambridgeshire
+East,107,North East Cambridgeshire,West Suffolk
+East,108,North East Hertfordshire,Saffron Walden
+East,109,North East Hertfordshire,South Cambridgeshire
+East,110,North East Hertfordshire,Stevenage
+East,111,North East Hertfordshire,Welwyn Hatfield
+East,112,Rayleigh and Wickford,Rochford and Southend East
+East,113,Rayleigh and Wickford,Southend West
+East,114,Rayleigh and Wickford,South Basildon and East Thurrock
+East,115,Rochford and Southend East,Southend West
+East,116,Saffron Walden,South Cambridgeshire
+East,117,Saffron Walden,South East Cambridgeshire
+East,118,Saffron Walden,Witham
+East,119,South West Hertfordshire,Watford
+East,120,South West Norfolk,South Norfolk
+East,121,South West Norfolk,West Suffolk
+East,122,South Norfolk,Waveney
+East,123,South Suffolk,West Suffolk
+East,124,South Basildon and East Thurrock,Thurrock
+East,125,South Cambridgeshire,South East Cambridgeshire
+East,126,South East Cambridgeshire,West Suffolk
+East,127,St. Albans,Watford
+East,128,St. Albans,Welwyn Hatfield
+East,129,Stevenage,Welwyn Hatfield
+East,130,Suffolk Coastal,Waveney
+East Midlands,131,Bassetlaw,Bolsover
+East Midlands,132,Bassetlaw,Mansfield
+East Midlands,133,Bassetlaw,Newark
+East Midlands,134,Bassetlaw,Sherwood
+East Midlands,135,Bolsover,Amber Valley
+East Midlands,136,Bolsover,Ashfield
+East Midlands,137,Bolsover,Chesterfield
+East Midlands,138,Bolsover,Derbyshire Dales
+East Midlands,139,Bolsover,Mansfield
+East Midlands,140,Bolsover,North East Derbyshire
+East Midlands,141,Boston and Skegness,Louth and Horncastle
+East Midlands,142,Boston and Skegness,Sleaford and North Hykeham
+East Midlands,143,Boston and Skegness,South Holland and The Deepings
+East Midlands,144,Bosworth,Charnwood
+East Midlands,145,Bosworth,North West Leicestershire
+East Midlands,146,Bosworth,South Leicestershire
+East Midlands,147,Amber Valley,Ashfield
+East Midlands,148,Amber Valley,Broxtowe
+East Midlands,149,Amber Valley,Derbyshire Dales
+East Midlands,150,Amber Valley,Erewash
+East Midlands,151,Amber Valley,Mid Derbyshire
+East Midlands,152,Ashfield,Broxtowe
+East Midlands,153,Ashfield,Mansfield
+East Midlands,154,Ashfield,Sherwood
+East Midlands,155,Broxtowe,Erewash
+East Midlands,156,Broxtowe,Nottingham North
+East Midlands,157,Broxtowe,Nottingham South
+East Midlands,158,Broxtowe,Rushcliffe
+East Midlands,159,Broxtowe,Sherwood
+East Midlands,160,Charnwood,Leicester East
+East Midlands,161,Charnwood,Leicester West
+East Midlands,162,Charnwood,Loughborough
+East Midlands,163,Charnwood,North West Leicestershire
+East Midlands,164,Charnwood,Rutland and Melton
+East Midlands,165,Charnwood,South Leicestershire
+East Midlands,166,Chesterfield,North East Derbyshire
+East Midlands,167,Corby,Grantham and Stamford
+East Midlands,168,Corby,Kettering
+East Midlands,169,Corby,Rutland and Melton
+East Midlands,170,Corby,Wellingborough
+East Midlands,171,Daventry,Harborough
+East Midlands,172,Daventry,Kettering
+East Midlands,173,Daventry,Northampton North
+East Midlands,174,Daventry,Northampton South
+East Midlands,175,Daventry,South Leicestershire
+East Midlands,176,Daventry,South Northamptonshire
+East Midlands,177,Daventry,Wellingborough
+East Midlands,178,Derby North,Derby South
+East Midlands,179,Derby North,Derbyshire Dales
+East Midlands,180,Derby North,Mid Derbyshire
+East Midlands,181,Derby North,South Derbyshire
+East Midlands,182,Derby South,Mid Derbyshire
+East Midlands,183,Derby South,South Derbyshire
+East Midlands,184,Derbyshire Dales,High Peak
+East Midlands,185,Derbyshire Dales,Mid Derbyshire
+East Midlands,186,Derbyshire Dales,North East Derbyshire
+East Midlands,187,Derbyshire Dales,South Derbyshire
+East Midlands,188,Erewash,Mid Derbyshire
+East Midlands,189,Erewash,North West Leicestershire
+East Midlands,190,Erewash,Rushcliffe
+East Midlands,191,Erewash,South Derbyshire
+East Midlands,192,Gainsborough,Lincoln
+East Midlands,193,Gainsborough,Louth and Horncastle
+East Midlands,194,Gainsborough,Newark
+East Midlands,195,Gainsborough,Sleaford and North Hykeham
+East Midlands,196,Gedling,Newark
+East Midlands,197,Gedling,Nottingham East
+East Midlands,198,Gedling,Nottingham North
+East Midlands,199,Gedling,Rushcliffe
+East Midlands,200,Gedling,Sherwood
+East Midlands,201,Grantham and Stamford,Rutland and Melton
+East Midlands,202,Grantham and Stamford,Sleaford and North Hykeham
+East Midlands,203,Grantham and Stamford,South Holland and The Deepings
+East Midlands,204,Harborough,Leicester East
+East Midlands,205,Harborough,Leicester South
+East Midlands,206,Harborough,Kettering
+East Midlands,207,Harborough,Rutland and Melton
+East Midlands,208,Harborough,South Leicestershire
+East Midlands,209,Leicester East,Leicester South
+East Midlands,210,Leicester East,Leicester West
+East Midlands,211,Leicester East,Rutland and Melton
+East Midlands,212,Leicester South,Leicester West
+East Midlands,213,Leicester South,South Leicestershire
+East Midlands,214,Leicester West,South Leicestershire
+East Midlands,215,Kettering,Rutland and Melton
+East Midlands,216,Kettering,Wellingborough
+East Midlands,217,Lincoln,Sleaford and North Hykeham
+East Midlands,218,Loughborough,North West Leicestershire
+East Midlands,219,Loughborough,Rushcliffe
+East Midlands,220,Loughborough,Rutland and Melton
+East Midlands,221,Louth and Horncastle,Sleaford and North Hykeham
+East Midlands,222,Mansfield,Sherwood
+East Midlands,223,Mid Derbyshire,South Derbyshire
+East Midlands,224,Newark,Rushcliffe
+East Midlands,225,Newark,Rutland and Melton
+East Midlands,226,Newark,Sherwood
+East Midlands,227,Newark,Sleaford and North Hykeham
+East Midlands,228,Northampton North,Northampton South
+East Midlands,229,Northampton South,South Northamptonshire
+East Midlands,230,Nottingham East,Nottingham North
+East Midlands,231,Nottingham East,Nottingham South
+East Midlands,232,Nottingham East,Rushcliffe
+East Midlands,233,Nottingham North,Nottingham South
+East Midlands,234,Nottingham North,Sherwood
+East Midlands,235,Nottingham South,Rushcliffe
+East Midlands,236,North West Leicestershire,Rushcliffe
+East Midlands,237,North West Leicestershire,South Derbyshire
+East Midlands,238,Rushcliffe,Rutland and Melton
+East Midlands,239,Rutland and Melton,Sleaford and North Hykeham
+East Midlands,240,Sleaford and North Hykeham,South Holland and The Deepings
+East Midlands,241,South Northamptonshire,Wellingborough
+London,242,Barking,Dagenham and Rainham
+London,243,Barking,East Ham
+London,244,Barking,Ilford South
+London,245,Battersea,Putney
+London,246,Battersea,Streatham
+London,247,Battersea,Vauxhall
+London,248,Battersea,Tooting
+London,249,Beckenham,Bromley and Chislehurst
+London,250,Beckenham,Croydon Central
+London,251,Beckenham,Lewisham East
+London,252,Beckenham,Lewisham West and Penge
+London,253,Beckenham,Orpington
+London,254,Bermondsey and Old Southwark,Camberwell and Peckham
+London,255,Bermondsey and Old Southwark,"Lewisham, Deptford"
+London,256,Bermondsey and Old Southwark,Vauxhall
+London,257,Bethnal Green and Bow,Cities of London and Westminster
+London,258,Bethnal Green and Bow,Hackney South and Shoreditch
+London,259,Bethnal Green and Bow,Poplar and Limehouse
+London,260,Bethnal Green and Bow,West Ham
+London,261,Bexleyheath and Crayford,Erith and Thamesmead
+London,262,Bexleyheath and Crayford,Old Bexley and Sidcup
+London,263,Brent Central,Brent North
+London,264,Brent Central,Ealing Central and Acton
+London,265,Brent Central,Finchley and Golders Green
+London,266,Brent Central,Hammersmith
+London,267,Brent Central,Hampstead and Kilburn
+London,268,Brent Central,Hendon
+London,269,Brent Central,Kensington
+London,270,Brent North,Ealing Central and Acton
+London,271,Brent North,Ealing North
+London,272,Brent North,Harrow East
+London,273,Brent North,Harrow West
+London,274,Brent North,Hendon
+London,275,Brentford and Isleworth,Ealing Central and Acton
+London,276,Brentford and Isleworth,"Ealing, Southall"
+London,277,Brentford and Isleworth,Feltham and Heston
+London,278,Brentford and Isleworth,Hammersmith
+London,279,Brentford and Isleworth,Twickenham
+London,280,Bromley and Chislehurst,Eltham
+London,281,Bromley and Chislehurst,Lewisham East
+London,282,Bromley and Chislehurst,Lewisham West and Penge
+London,283,Bromley and Chislehurst,Old Bexley and Sidcup
+London,284,Bromley and Chislehurst,Orpington
+London,285,Camberwell and Peckham,Dulwich and West Norwood
+London,286,Camberwell and Peckham,Lewisham West and Penge
+London,287,Camberwell and Peckham,"Lewisham, Deptford"
+London,288,Camberwell and Peckham,Vauxhall
+London,289,Carshalton and Wallington,Croydon North
+London,290,Carshalton and Wallington,Croydon South
+London,291,Carshalton and Wallington,Mitcham and Morden
+London,292,Carshalton and Wallington,Sutton and Cheam
+London,293,Chelsea and Fulham,Cities of London and Westminster
+London,294,Chelsea and Fulham,Hammersmith
+London,295,Chelsea and Fulham,Kensington
+London,296,Chingford and Woodford Green,Edmonton
+London,297,Chingford and Woodford Green,Ilford North
+London,298,Chingford and Woodford Green,Leyton and Wanstead
+London,299,Chingford and Woodford Green,Walthamstow
+London,300,Chipping Barnet,"Enfield, Southgate"
+London,301,Chipping Barnet,Finchley and Golders Green
+London,302,Chipping Barnet,Hornsey and Wood Green
+London,303,Chipping Barnet,Hendon
+London,304,Cities of London and Westminster,Hackney South and Shoreditch
+London,305,Cities of London and Westminster,Holborn and St. Pancras
+London,306,Cities of London and Westminster,Islington South and Finsbury
+London,307,Cities of London and Westminster,Kensington
+London,308,Cities of London and Westminster,Poplar and Limehouse
+London,309,Cities of London and Westminster,Westminster North
+London,310,Croydon Central,Croydon North
+London,311,Croydon Central,Croydon South
+London,312,Croydon Central,Lewisham West and Penge
+London,313,Croydon Central,Orpington
+London,314,Croydon North,Croydon South
+London,315,Croydon North,Dulwich and West Norwood
+London,316,Croydon North,Lewisham West and Penge
+London,317,Croydon North,Mitcham and Morden
+London,318,Croydon North,Streatham
+London,319,Dagenham and Rainham,Hornchurch and Upminster
+London,320,Dagenham and Rainham,Ilford North
+London,321,Dagenham and Rainham,Ilford South
+London,322,Dagenham and Rainham,Romford
+London,323,Dulwich and West Norwood,Lewisham West and Penge
+London,324,Dulwich and West Norwood,Streatham
+London,325,Dulwich and West Norwood,Vauxhall
+London,326,Ealing Central and Acton,Ealing North
+London,327,Ealing Central and Acton,"Ealing, Southall"
+London,328,Ealing Central and Acton,Hammersmith
+London,329,Ealing North,"Ealing, Southall"
+London,330,Ealing North,Harrow West
+London,331,Ealing North,Hayes and Harlington
+London,332,Ealing North,Uxbridge and South Ruislip
+London,333,"Ealing, Southall",Feltham and Heston
+London,334,"Ealing, Southall",Hayes and Harlington
+London,335,East Ham,Ilford South
+London,336,East Ham,Leyton and Wanstead
+London,337,East Ham,West Ham
+London,338,Eltham,Erith and Thamesmead
+London,339,Eltham,Greenwich and Woolwich
+London,340,Eltham,Lewisham East
+London,341,Eltham,Old Bexley and Sidcup
+London,342,Enfield North,"Enfield, Southgate"
+London,343,Enfield North,Edmonton
+London,344,"Enfield, Southgate",Edmonton
+London,345,"Enfield, Southgate",Hornsey and Wood Green
+London,346,"Enfield, Southgate",Tottenham
+London,347,Erith and Thamesmead,Greenwich and Woolwich
+London,348,Erith and Thamesmead,Old Bexley and Sidcup
+London,349,Edmonton,Walthamstow
+London,350,Edmonton,Tottenham
+London,351,Feltham and Heston,Hayes and Harlington
+London,352,Feltham and Heston,Twickenham
+London,353,Finchley and Golders Green,Hampstead and Kilburn
+London,354,Finchley and Golders Green,Holborn and St. Pancras
+London,355,Finchley and Golders Green,Hornsey and Wood Green
+London,356,Finchley and Golders Green,Hendon
+London,357,Greenwich and Woolwich,Lewisham East
+London,358,Greenwich and Woolwich,"Lewisham, Deptford"
+London,359,Hackney North and Stoke Newington,Hackney South and Shoreditch
+London,360,Hackney North and Stoke Newington,Islington North
+London,361,Hackney North and Stoke Newington,Walthamstow
+London,362,Hackney North and Stoke Newington,Tottenham
+London,363,Hackney South and Shoreditch,Islington North
+London,364,Hackney South and Shoreditch,Islington South and Finsbury
+London,365,Hackney South and Shoreditch,Leyton and Wanstead
+London,366,Hackney South and Shoreditch,Walthamstow
+London,367,Hackney South and Shoreditch,West Ham
+London,368,Hammersmith,Kensington
+London,369,Hampstead and Kilburn,Holborn and St. Pancras
+London,370,Hampstead and Kilburn,Kensington
+London,371,Hampstead and Kilburn,Westminster North
+London,372,Harrow East,Harrow West
+London,373,Harrow East,Hendon
+London,374,Harrow East,"Ruislip, Northwood and Pinner"
+London,375,Harrow West,"Ruislip, Northwood and Pinner"
+London,376,Harrow West,Uxbridge and South Ruislip
+London,377,Hayes and Harlington,Uxbridge and South Ruislip
+London,378,Holborn and St. Pancras,Hornsey and Wood Green
+London,379,Holborn and St. Pancras,Islington North
+London,380,Holborn and St. Pancras,Islington South and Finsbury
+London,381,Holborn and St. Pancras,Westminster North
+London,382,Hornchurch and Upminster,Romford
+London,383,Hornsey and Wood Green,Islington North
+London,384,Hornsey and Wood Green,Tottenham
+London,385,Ilford North,Ilford South
+London,386,Ilford North,Leyton and Wanstead
+London,387,Ilford North,Romford
+London,388,Kingston and Surbiton,Richmond Park
+London,389,Kingston and Surbiton,Sutton and Cheam
+London,390,Kingston and Surbiton,Twickenham
+London,391,Kingston and Surbiton,Wimbledon
+London,392,Lewisham East,Lewisham West and Penge
+London,393,Lewisham East,"Lewisham, Deptford"
+London,394,Lewisham West and Penge,"Lewisham, Deptford"
+London,395,Ilford South,Leyton and Wanstead
+London,396,Islington North,Islington South and Finsbury
+London,397,Islington North,Tottenham
+London,398,Kensington,Westminster North
+London,399,Leyton and Wanstead,Walthamstow
+London,400,Leyton and Wanstead,West Ham
+London,401,Mitcham and Morden,Streatham
+London,402,Mitcham and Morden,Sutton and Cheam
+London,403,Mitcham and Morden,Tooting
+London,404,Mitcham and Morden,Wimbledon
+London,405,Old Bexley and Sidcup,Orpington
+London,406,Poplar and Limehouse,West Ham
+London,407,Putney,Richmond Park
+London,408,Putney,Tooting
+London,409,Putney,Wimbledon
+London,410,Richmond Park,Twickenham
+London,411,Richmond Park,Wimbledon
+London,412,"Ruislip, Northwood and Pinner",Uxbridge and South Ruislip
+London,413,Streatham,Vauxhall
+London,414,Streatham,Tooting
+London,415,Sutton and Cheam,Wimbledon
+London,416,Walthamstow,Tottenham
+London,417,Tooting,Wimbledon
+North East,418,Bishop Auckland,City of Durham
+North East,419,Bishop Auckland,North West Durham
+North East,420,Bishop Auckland,Sedgefield
+North East,421,Berwick-upon-Tweed,Hexham
+North East,422,Berwick-upon-Tweed,Wansbeck
+North East,423,Blaydon,Gateshead
+North East,424,Blaydon,Hexham
+North East,425,Blaydon,North West Durham
+North East,426,Blaydon,North Durham
+North East,427,Blaydon,Washington and Sunderland West
+North East,428,Blyth Valley,Hexham
+North East,429,Blyth Valley,North Tyneside
+North East,430,Blyth Valley,Wansbeck
+North East,431,Blyth Valley,Tynemouth
+North East,432,Darlington,Sedgefield
+North East,433,City of Durham,Easington
+North East,434,City of Durham,Houghton and Sunderland South
+North East,435,City of Durham,North West Durham
+North East,436,City of Durham,North Durham
+North East,437,City of Durham,Sedgefield
+North East,438,Easington,Hartlepool
+North East,439,Easington,Houghton and Sunderland South
+North East,440,Easington,Sedgefield
+North East,441,Easington,Sunderland Central
+North East,442,Gateshead,Jarrow
+North East,443,Gateshead,Washington and Sunderland West
+North East,444,Hartlepool,Sedgefield
+North East,445,Hartlepool,Stockton North
+North East,446,Houghton and Sunderland South,North Durham
+North East,447,Houghton and Sunderland South,Sunderland Central
+North East,448,Houghton and Sunderland South,Washington and Sunderland West
+North East,449,Hexham,North Tyneside
+North East,450,Hexham,North West Durham
+North East,451,Hexham,Newcastle upon Tyne North
+North East,452,Hexham,Wansbeck
+North East,453,Jarrow,South Shields
+North East,454,Jarrow,Sunderland Central
+North East,455,Jarrow,Washington and Sunderland West
+North East,456,Middlesbrough,Middlesbrough South and East Cleveland
+North East,457,Middlesbrough,Redcar
+North East,458,Middlesbrough,Stockton South
+North East,459,Middlesbrough South and East Cleveland,Redcar
+North East,460,Middlesbrough South and East Cleveland,Stockton South
+North East,461,North Tyneside,Newcastle upon Tyne East
+North East,462,North Tyneside,Newcastle upon Tyne North
+North East,463,North Tyneside,Tynemouth
+North East,464,North West Durham,North Durham
+North East,465,Newcastle upon Tyne Central,Newcastle upon Tyne East
+North East,466,Newcastle upon Tyne Central,Newcastle upon Tyne North
+North East,467,Newcastle upon Tyne East,Newcastle upon Tyne North
+North East,468,North Durham,Washington and Sunderland West
+North East,469,Sedgefield,Stockton North
+North East,470,Sedgefield,Stockton South
+North East,471,South Shields,Sunderland Central
+North East,472,Stockton North,Stockton South
+North East,473,Sunderland Central,Washington and Sunderland West
+North West,474,Barrow and Furness,Copeland
+North West,475,Barrow and Furness,Westmorland and Lonsdale
+North West,476,Birkenhead,Wallasey
+North West,477,Birkenhead,Wirral South
+North West,478,Birkenhead,Wirral West
+North West,479,Blackburn,Hyndburn
+North West,480,Blackburn,Ribble Valley
+North West,481,Blackburn,Rossendale and Darwen
+North West,482,Blackley and Broughton,Bury South
+North West,483,Blackley and Broughton,Heywood and Middleton
+North West,484,Blackley and Broughton,Manchester Central
+North West,485,Blackley and Broughton,Oldham West and Royton
+North West,486,Blackley and Broughton,Salford and Eccles
+North West,487,Blackpool North and Cleveleys,Blackpool South
+North West,488,Blackpool North and Cleveleys,Fylde
+North West,489,Blackpool North and Cleveleys,Lancaster and Fleetwood
+North West,490,Blackpool North and Cleveleys,Wyre and Preston North
+North West,491,Blackpool South,Fylde
+North West,492,Bolton North East,Bolton South East
+North West,493,Bolton North East,Bolton West
+North West,494,Bolton North East,Bury North
+North West,495,Bolton North East,Bury South
+North West,496,Bolton North East,Rossendale and Darwen
+North West,497,Bolton South East,Bolton West
+North West,498,Bolton South East,Bury South
+North West,499,Bolton South East,Salford and Eccles
+North West,500,Bolton South East,Worsley and Eccles South
+North West,501,Bolton West,Leigh
+North West,502,Bolton West,Makerfield
+North West,503,Bolton West,Rossendale and Darwen
+North West,504,Bolton West,Wigan
+North West,505,Bolton West,Worsley and Eccles South
+North West,506,Bootle,"Liverpool, Riverside"
+North West,507,Bootle,"Liverpool, Walton"
+North West,508,Bootle,Sefton Central
+North West,509,Altrincham and Sale West,Stretford and Urmston
+North West,510,Altrincham and Sale West,Tatton
+North West,511,Altrincham and Sale West,Warrington North
+North West,512,Altrincham and Sale West,Warrington South
+North West,513,Altrincham and Sale West,Wythenshawe and Sale East
+North West,514,Ashton-under-Lyne,Denton and Reddish
+North West,515,Ashton-under-Lyne,Manchester Central
+North West,516,Ashton-under-Lyne,Oldham East and Saddleworth
+North West,517,Ashton-under-Lyne,Oldham West and Royton
+North West,518,Ashton-under-Lyne,Stalybridge and Hyde
+North West,519,Burnley,Hyndburn
+North West,520,Burnley,Pendle
+North West,521,Burnley,Ribble Valley
+North West,522,Burnley,Rossendale and Darwen
+North West,523,Bury North,Bury South
+North West,524,Bury North,Heywood and Middleton
+North West,525,Bury North,Rossendale and Darwen
+North West,526,Bury South,Heywood and Middleton
+North West,527,Bury South,Salford and Eccles
+North West,528,Carlisle,Penrith and The Border
+North West,529,Carlisle,Workington
+North West,530,Cheadle,Hazel Grove
+North West,531,Cheadle,Macclesfield
+North West,532,Cheadle,"Manchester, Withington"
+North West,533,Cheadle,Stockport
+North West,534,Cheadle,Tatton
+North West,535,Cheadle,Wythenshawe and Sale East
+North West,536,Crewe and Nantwich,Congleton
+North West,537,Crewe and Nantwich,Eddisbury
+North West,538,City of Chester,Eddisbury
+North West,539,City of Chester,Ellesmere Port and Neston
+North West,540,Congleton,Eddisbury
+North West,541,Congleton,Macclesfield
+North West,542,Congleton,Tatton
+North West,543,Copeland,Penrith and The Border
+North West,544,Copeland,Westmorland and Lonsdale
+North West,545,Copeland,Workington
+North West,546,Denton and Reddish,Hazel Grove
+North West,547,Denton and Reddish,Manchester Central
+North West,548,Denton and Reddish,"Manchester, Gorton"
+North West,549,Denton and Reddish,Stalybridge and Hyde
+North West,550,Denton and Reddish,Stockport
+North West,551,Eddisbury,Ellesmere Port and Neston
+North West,552,Eddisbury,Tatton
+North West,553,Eddisbury,Weaver Vale
+North West,554,Ellesmere Port and Neston,Weaver Vale
+North West,555,Ellesmere Port and Neston,Wirral South
+North West,556,Fylde,Preston
+North West,557,Fylde,Wyre and Preston North
+North West,558,Garston and Halewood,Halton
+North West,559,Garston and Halewood,Knowsley
+North West,560,Garston and Halewood,"Liverpool, Riverside"
+North West,561,Garston and Halewood,"Liverpool, Wavertree"
+North West,562,Garston and Halewood,St. Helens South and Whiston
+North West,563,Halton,St. Helens South and Whiston
+North West,564,Halton,Warrington South
+North West,565,Halton,Weaver Vale
+North West,566,Hazel Grove,Macclesfield
+North West,567,Hazel Grove,Stalybridge and Hyde
+North West,568,Hazel Grove,Stockport
+North West,569,Hyndburn,Ribble Valley
+North West,570,Hyndburn,Rossendale and Darwen
+North West,571,Heywood and Middleton,Oldham West and Royton
+North West,572,Heywood and Middleton,Rochdale
+North West,573,Heywood and Middleton,Rossendale and Darwen
+North West,574,Knowsley,"Liverpool, Walton"
+North West,575,Knowsley,"Liverpool, Wavertree"
+North West,576,Knowsley,"Liverpool, West Derby"
+North West,577,Knowsley,Sefton Central
+North West,578,Knowsley,St. Helens North
+North West,579,Knowsley,St. Helens South and Whiston
+North West,580,Knowsley,West Lancashire
+North West,581,Lancaster and Fleetwood,Morecambe and Lunesdale
+North West,582,Lancaster and Fleetwood,Ribble Valley
+North West,583,Lancaster and Fleetwood,Wyre and Preston North
+North West,584,Leigh,Makerfield
+North West,585,Leigh,St. Helens North
+North West,586,Leigh,Warrington North
+North West,587,Leigh,Worsley and Eccles South
+North West,588,Macclesfield,Tatton
+North West,589,Makerfield,St. Helens North
+North West,590,Makerfield,West Lancashire
+North West,591,Makerfield,Wigan
+North West,592,Manchester Central,"Manchester, Gorton"
+North West,593,Manchester Central,Oldham West and Royton
+North West,594,Manchester Central,Salford and Eccles
+North West,595,Manchester Central,Stretford and Urmston
+North West,596,"Manchester, Gorton","Manchester, Withington"
+North West,597,"Manchester, Gorton",Stockport
+North West,598,"Manchester, Gorton",Stretford and Urmston
+North West,599,"Manchester, Withington",Stockport
+North West,600,"Manchester, Withington",Stretford and Urmston
+North West,601,"Manchester, Withington",Wythenshawe and Sale East
+North West,602,"Liverpool, Riverside","Liverpool, Walton"
+North West,603,"Liverpool, Riverside","Liverpool, Wavertree"
+North West,604,"Liverpool, Walton","Liverpool, Wavertree"
+North West,605,"Liverpool, Walton","Liverpool, West Derby"
+North West,606,"Liverpool, Walton",Sefton Central
+North West,607,"Liverpool, Wavertree","Liverpool, West Derby"
+North West,608,Morecambe and Lunesdale,Westmorland and Lonsdale
+North West,609,Oldham East and Saddleworth,Oldham West and Royton
+North West,610,Oldham East and Saddleworth,Rochdale
+North West,611,Oldham East and Saddleworth,Stalybridge and Hyde
+North West,612,Oldham West and Royton,Rochdale
+North West,613,Pendle,Ribble Valley
+North West,614,Penrith and The Border,Westmorland and Lonsdale
+North West,615,Penrith and The Border,Workington
+North West,616,Preston,Ribble Valley
+North West,617,Preston,South Ribble
+North West,618,Preston,Wyre and Preston North
+North West,619,Ribble Valley,South Ribble
+North West,620,Ribble Valley,Wyre and Preston North
+North West,621,Rochdale,Rossendale and Darwen
+North West,622,Salford and Eccles,Stretford and Urmston
+North West,623,Salford and Eccles,Worsley and Eccles South
+North West,624,Sefton Central,Southport
+North West,625,Sefton Central,West Lancashire
+North West,626,Southport,South Ribble
+North West,627,Southport,West Lancashire
+North West,628,South Ribble,West Lancashire
+North West,629,St. Helens North,St. Helens South and Whiston
+North West,630,St. Helens North,Warrington North
+North West,631,St. Helens North,West Lancashire
+North West,632,St. Helens South and Whiston,Warrington North
+North West,633,St. Helens South and Whiston,Warrington South
+North West,634,Stretford and Urmston,Warrington North
+North West,635,Stretford and Urmston,Worsley and Eccles South
+North West,636,Stretford and Urmston,Wythenshawe and Sale East
+North West,637,Tatton,Warrington South
+North West,638,Tatton,Weaver Vale
+North West,639,Tatton,Wythenshawe and Sale East
+North West,640,Wallasey,Wirral West
+North West,641,Warrington North,Warrington South
+North West,642,Warrington North,Worsley and Eccles South
+North West,643,Warrington South,Weaver Vale
+North West,644,West Lancashire,Wigan
+North West,645,Wirral South,Wirral West
+Northern Ireland,646,Belfast East,Belfast North
+Northern Ireland,647,Belfast East,Belfast South
+Northern Ireland,648,Belfast East,North Down
+Northern Ireland,649,Belfast East,Strangford
+Northern Ireland,650,Belfast North,Belfast South
+Northern Ireland,651,Belfast North,Belfast West
+Northern Ireland,652,Belfast North,East Antrim
+Northern Ireland,653,Belfast North,South Antrim
+Northern Ireland,654,Belfast South,Belfast West
+Northern Ireland,655,Belfast South,Lagan Valley
+Northern Ireland,656,Belfast South,Strangford
+Northern Ireland,657,Belfast West,Lagan Valley
+Northern Ireland,658,Belfast West,South Antrim
+Northern Ireland,659,East Antrim,North Antrim
+Northern Ireland,660,East Antrim,South Antrim
+Northern Ireland,661,East Londonderry,Foyle
+Northern Ireland,662,East Londonderry,Mid Ulster
+Northern Ireland,663,East Londonderry,North Antrim
+Northern Ireland,664,East Londonderry,West Tyrone
+Northern Ireland,665,Fermanagh and South Tyrone,Mid Ulster
+Northern Ireland,666,Fermanagh and South Tyrone,Newry and Armagh
+Northern Ireland,667,Fermanagh and South Tyrone,Upper Bann
+Northern Ireland,668,Fermanagh and South Tyrone,West Tyrone
+Northern Ireland,669,Foyle,West Tyrone
+Northern Ireland,670,Lagan Valley,South Antrim
+Northern Ireland,671,Lagan Valley,South Down
+Northern Ireland,672,Lagan Valley,Strangford
+Northern Ireland,673,Lagan Valley,Upper Bann
+Northern Ireland,674,Mid Ulster,North Antrim
+Northern Ireland,675,Mid Ulster,South Antrim
+Northern Ireland,676,Mid Ulster,Upper Bann
+Northern Ireland,677,Mid Ulster,West Tyrone
+Northern Ireland,678,Newry and Armagh,South Down
+Northern Ireland,679,Newry and Armagh,Upper Bann
+Northern Ireland,680,North Antrim,South Antrim
+Northern Ireland,681,North Down,Strangford
+Northern Ireland,682,South Antrim,Upper Bann
+Northern Ireland,683,South Down,Strangford
+Northern Ireland,684,South Down,Upper Bann
+Scotland,685,Central Ayrshire,Kilmarnock and Loudoun
+Scotland,686,Central Ayrshire,North Ayrshire and Arran
+Scotland,687,Central Ayrshire,"Ayr, Carrick and Cumnock"
+Scotland,688,"Coatbridge, Chryston and Bellshill","Cumbernauld, Kilsyth and Kirkintilloch East"
+Scotland,689,"Coatbridge, Chryston and Bellshill",East Dunbartonshire
+Scotland,690,"Coatbridge, Chryston and Bellshill",Glasgow East
+Scotland,691,"Coatbridge, Chryston and Bellshill",Glasgow North East
+Scotland,692,"Coatbridge, Chryston and Bellshill",Lanark and Hamilton East
+Scotland,693,"Coatbridge, Chryston and Bellshill",Motherwell and Wishaw
+Scotland,694,"Coatbridge, Chryston and Bellshill",Airdrie and Shotts
+Scotland,695,"Cumbernauld, Kilsyth and Kirkintilloch East",East Dunbartonshire
+Scotland,696,"Cumbernauld, Kilsyth and Kirkintilloch East",Linlithgow and East Falkirk
+Scotland,697,"Cumbernauld, Kilsyth and Kirkintilloch East",Airdrie and Shotts
+Scotland,698,"Cumbernauld, Kilsyth and Kirkintilloch East",Falkirk
+Scotland,699,"Cumbernauld, Kilsyth and Kirkintilloch East",Stirling
+Scotland,700,Dumfries and Galloway,"Dumfriesshire, Clydesdale and Tweeddale"
+Scotland,701,Dumfries and Galloway,"Ayr, Carrick and Cumnock"
+Scotland,702,"Dumfriesshire, Clydesdale and Tweeddale","East Kilbride, Strathaven and Lesmahagow"
+Scotland,703,"Dumfriesshire, Clydesdale and Tweeddale",Kilmarnock and Loudoun
+Scotland,704,"Dumfriesshire, Clydesdale and Tweeddale",Lanark and Hamilton East
+Scotland,705,"Dumfriesshire, Clydesdale and Tweeddale",Livingston
+Scotland,706,"Dumfriesshire, Clydesdale and Tweeddale",Midlothian
+Scotland,707,"Dumfriesshire, Clydesdale and Tweeddale","Ayr, Carrick and Cumnock"
+Scotland,708,"Dumfriesshire, Clydesdale and Tweeddale","Berwickshire, Roxburgh and Selkirk"
+Scotland,709,"Dumfriesshire, Clydesdale and Tweeddale",Edinburgh South West
+Scotland,710,Dundee East,Dundee West
+Scotland,711,Dundee East,Angus
+Scotland,712,Dundee West,Angus
+Scotland,713,Dundee West,Perth and North Perthshire
+Scotland,714,Dunfermline and West Fife,Kirkcaldy and Cowdenbeath
+Scotland,715,Dunfermline and West Fife,Ochil and South Perthshire
+Scotland,716,East Dunbartonshire,Glasgow North
+Scotland,717,East Dunbartonshire,Glasgow North East
+Scotland,718,East Dunbartonshire,Glasgow North West
+Scotland,719,East Dunbartonshire,Stirling
+Scotland,720,East Dunbartonshire,West Dunbartonshire
+Scotland,721,"East Kilbride, Strathaven and Lesmahagow",Glasgow South
+Scotland,722,"East Kilbride, Strathaven and Lesmahagow",Kilmarnock and Loudoun
+Scotland,723,"East Kilbride, Strathaven and Lesmahagow",Lanark and Hamilton East
+Scotland,724,"East Kilbride, Strathaven and Lesmahagow",East Renfrewshire
+Scotland,725,"East Kilbride, Strathaven and Lesmahagow",Rutherglen and Hamilton West
+Scotland,726,Glasgow East,Glasgow North East
+Scotland,727,Glasgow East,Lanark and Hamilton East
+Scotland,728,Glasgow East,Glasgow Central
+Scotland,729,Glasgow East,Rutherglen and Hamilton West
+Scotland,730,Glasgow North,Glasgow North East
+Scotland,731,Glasgow North,Glasgow North West
+Scotland,732,Glasgow North,Glasgow Central
+Scotland,733,Glasgow North East,Glasgow Central
+Scotland,734,Glasgow North West,West Dunbartonshire
+Scotland,735,Glasgow South,Glasgow South West
+Scotland,736,Glasgow South,East Renfrewshire
+Scotland,737,Glasgow South,Glasgow Central
+Scotland,738,Glasgow South,Rutherglen and Hamilton West
+Scotland,739,Glasgow South West,East Renfrewshire
+Scotland,740,Glasgow South West,Glasgow Central
+Scotland,741,Glasgow South West,Paisley and Renfrewshire North
+Scotland,742,Glasgow South West,Paisley and Renfrewshire South
+Scotland,743,Glenrothes,Kirkcaldy and Cowdenbeath
+Scotland,744,Glenrothes,North East Fife
+Scotland,745,Glenrothes,Ochil and South Perthshire
+Scotland,746,Gordon,Moray
+Scotland,747,Gordon,Aberdeen North
+Scotland,748,Gordon,Banff and Buchan
+Scotland,749,Gordon,West Aberdeenshire and Kincardine
+Scotland,750,Inverclyde,North Ayrshire and Arran
+Scotland,751,Inverclyde,Paisley and Renfrewshire North
+Scotland,752,Inverclyde,Paisley and Renfrewshire South
+Scotland,753,"Inverness, Nairn, Badenoch and Strathspey",Moray
+Scotland,754,"Inverness, Nairn, Badenoch and Strathspey",Perth and North Perthshire
+Scotland,755,"Inverness, Nairn, Badenoch and Strathspey","Ross, Skye and Lochaber"
+Scotland,756,"Inverness, Nairn, Badenoch and Strathspey",West Aberdeenshire and Kincardine
+Scotland,757,Kilmarnock and Loudoun,North Ayrshire and Arran
+Scotland,758,Kilmarnock and Loudoun,"Ayr, Carrick and Cumnock"
+Scotland,759,Kilmarnock and Loudoun,East Renfrewshire
+Scotland,760,Kirkcaldy and Cowdenbeath,Ochil and South Perthshire
+Scotland,761,Lanark and Hamilton East,Livingston
+Scotland,762,Lanark and Hamilton East,Motherwell and Wishaw
+Scotland,763,Lanark and Hamilton East,Airdrie and Shotts
+Scotland,764,Lanark and Hamilton East,Rutherglen and Hamilton West
+Scotland,765,Linlithgow and East Falkirk,Livingston
+Scotland,766,Linlithgow and East Falkirk,Airdrie and Shotts
+Scotland,767,Linlithgow and East Falkirk,Edinburgh West
+Scotland,768,Linlithgow and East Falkirk,Falkirk
+Scotland,769,Livingston,Airdrie and Shotts
+Scotland,770,Livingston,Edinburgh South West
+Scotland,771,Livingston,Edinburgh West
+Scotland,772,Midlothian,"Berwickshire, Roxburgh and Selkirk"
+Scotland,773,Midlothian,East Lothian
+Scotland,774,Midlothian,Edinburgh East
+Scotland,775,Midlothian,Edinburgh South
+Scotland,776,Midlothian,Edinburgh South West
+Scotland,777,Moray,Banff and Buchan
+Scotland,778,Moray,West Aberdeenshire and Kincardine
+Scotland,779,Motherwell and Wishaw,Airdrie and Shotts
+Scotland,780,North Ayrshire and Arran,East Renfrewshire
+Scotland,781,North Ayrshire and Arran,Paisley and Renfrewshire South
+Scotland,782,North East Fife,Ochil and South Perthshire
+Scotland,783,Aberdeen North,Aberdeen South
+Scotland,784,Aberdeen North,West Aberdeenshire and Kincardine
+Scotland,785,Aberdeen South,West Aberdeenshire and Kincardine
+Scotland,786,Angus,Perth and North Perthshire
+Scotland,787,Angus,West Aberdeenshire and Kincardine
+Scotland,788,Argyll and Bute,Perth and North Perthshire
+Scotland,789,Argyll and Bute,"Ross, Skye and Lochaber"
+Scotland,790,Argyll and Bute,Stirling
+Scotland,791,Argyll and Bute,West Dunbartonshire
+Scotland,792,"Berwickshire, Roxburgh and Selkirk",East Lothian
+Scotland,793,"Caithness, Sutherland and Easter Ross","Ross, Skye and Lochaber"
+Scotland,794,East Lothian,Edinburgh East
+Scotland,795,East Renfrewshire,Paisley and Renfrewshire South
+Scotland,796,Edinburgh East,Edinburgh North and Leith
+Scotland,797,Edinburgh East,Edinburgh South
+Scotland,798,Edinburgh East,Edinburgh South West
+Scotland,799,Edinburgh North and Leith,Edinburgh South West
+Scotland,800,Edinburgh North and Leith,Edinburgh West
+Scotland,801,Edinburgh South,Edinburgh South West
+Scotland,802,Edinburgh South West,Edinburgh West
+Scotland,803,Falkirk,Stirling
+Scotland,804,Glasgow Central,Rutherglen and Hamilton West
+Scotland,805,Ochil and South Perthshire,Perth and North Perthshire
+Scotland,806,Ochil and South Perthshire,Stirling
+Scotland,807,Paisley and Renfrewshire North,Paisley and Renfrewshire South
+Scotland,808,Perth and North Perthshire,"Ross, Skye and Lochaber"
+Scotland,809,Perth and North Perthshire,Stirling
+Scotland,810,Perth and North Perthshire,West Aberdeenshire and Kincardine
+Scotland,811,Stirling,West Dunbartonshire
+South East,812,Basingstoke,North West Hampshire
+South East,813,Basingstoke,North East Hampshire
+South East,814,Beaconsfield,Chesham and Amersham
+South East,815,Beaconsfield,Maidenhead
+South East,816,Beaconsfield,Slough
+South East,817,Beaconsfield,Windsor
+South East,818,Beaconsfield,Wycombe
+South East,819,Bexhill and Battle,Ashford
+South East,820,Bexhill and Battle,Eastbourne
+South East,821,Bexhill and Battle,Hastings and Rye
+South East,822,Bexhill and Battle,Lewes
+South East,823,Bexhill and Battle,Wealden
+South East,824,Bexhill and Battle,Tunbridge Wells
+South East,825,Bognor Regis and Littlehampton,Arundel and South Downs
+South East,826,Bognor Regis and Littlehampton,Chichester
+South East,827,Bognor Regis and Littlehampton,Worthing West
+South East,828,Bracknell,Aldershot
+South East,829,Bracknell,North East Hampshire
+South East,830,Bracknell,Surrey Heath
+South East,831,Bracknell,Windsor
+South East,832,Bracknell,Wokingham
+South East,833,Aldershot,North East Hampshire
+South East,834,Aldershot,South West Surrey
+South East,835,Aldershot,Surrey Heath
+South East,836,Arundel and South Downs,"Brighton, Pavilion"
+South East,837,Arundel and South Downs,Chichester
+South East,838,Arundel and South Downs,East Worthing and Shoreham
+South East,839,Arundel and South Downs,Horsham
+South East,840,Arundel and South Downs,Hove
+South East,841,Arundel and South Downs,Lewes
+South East,842,Arundel and South Downs,Mid Sussex
+South East,843,Arundel and South Downs,Worthing West
+South East,844,Ashford,Canterbury
+South East,845,Ashford,Faversham and Mid Kent
+South East,846,Ashford,Folkestone and Hythe
+South East,847,Ashford,Hastings and Rye
+South East,848,Ashford,Maidstone and The Weald
+South East,849,Ashford,Tunbridge Wells
+South East,850,Aylesbury,Buckingham
+South East,851,Aylesbury,Chesham and Amersham
+South East,852,Aylesbury,Henley
+South East,853,Aylesbury,Wycombe
+South East,854,Banbury,Buckingham
+South East,855,Banbury,Henley
+South East,856,Banbury,Witney
+South East,857,"Brighton, Kemptown","Brighton, Pavilion"
+South East,858,"Brighton, Kemptown",Lewes
+South East,859,"Brighton, Pavilion",Hove
+South East,860,"Brighton, Pavilion",Lewes
+South East,861,Buckingham,Henley
+South East,862,Buckingham,Milton Keynes South
+South East,863,Canterbury,Dover
+South East,864,Canterbury,Faversham and Mid Kent
+South East,865,Canterbury,Folkestone and Hythe
+South East,866,Canterbury,North Thanet
+South East,867,Canterbury,South Thanet
+South East,868,Chatham and Aylesford,Faversham and Mid Kent
+South East,869,Chatham and Aylesford,Gillingham and Rainham
+South East,870,Chatham and Aylesford,Gravesham
+South East,871,Chatham and Aylesford,Maidstone and The Weald
+South East,872,Chatham and Aylesford,Rochester and Strood
+South East,873,Chatham and Aylesford,Tonbridge and Malling
+South East,874,Chesham and Amersham,Wycombe
+South East,875,Chichester,East Hampshire
+South East,876,Chichester,Guildford
+South East,877,Chichester,Havant
+South East,878,Chichester,Horsham
+South East,879,Chichester,Meon Valley
+South East,880,Chichester,South West Surrey
+South East,881,Crawley,East Surrey
+South East,882,Crawley,Horsham
+South East,883,Crawley,Mole Valley
+South East,884,Dartford,Gravesham
+South East,885,Dartford,Sevenoaks
+South East,886,Dartford,Tonbridge and Malling
+South East,887,Dover,Folkestone and Hythe
+South East,888,Dover,South Thanet
+South East,889,Epsom and Ewell,Mole Valley
+South East,890,Epsom and Ewell,Reigate
+South East,891,Esher and Walton,Mole Valley
+South East,892,Esher and Walton,Runnymede and Weybridge
+South East,893,Esher and Walton,Spelthorne
+South East,894,Fareham,Gosport
+South East,895,Fareham,Meon Valley
+South East,896,Fareham,Portsmouth North
+South East,897,East Hampshire,Meon Valley
+South East,898,East Hampshire,North East Hampshire
+South East,899,East Hampshire,South West Surrey
+South East,900,East Hampshire,Winchester
+South East,901,East Surrey,Horsham
+South East,902,East Surrey,Mid Sussex
+South East,903,East Surrey,Mole Valley
+South East,904,East Surrey,Reigate
+South East,905,East Surrey,Sevenoaks
+South East,906,East Surrey,Wealden
+South East,907,East Surrey,Tonbridge and Malling
+South East,908,East Worthing and Shoreham,Hove
+South East,909,East Worthing and Shoreham,Worthing West
+South East,910,Eastbourne,Lewes
+South East,911,Eastleigh,Meon Valley
+South East,912,Eastleigh,Romsey and Southampton North
+South East,913,Eastleigh,"Southampton, Itchen"
+South East,914,Eastleigh,Winchester
+South East,915,Faversham and Mid Kent,Gillingham and Rainham
+South East,916,Faversham and Mid Kent,Maidstone and The Weald
+South East,917,Faversham and Mid Kent,Sittingbourne and Sheppey
+South East,918,Folkestone and Hythe,Hastings and Rye
+South East,919,Gillingham and Rainham,Rochester and Strood
+South East,920,Gillingham and Rainham,Sittingbourne and Sheppey
+South East,921,Gravesham,Rochester and Strood
+South East,922,Gravesham,Tonbridge and Malling
+South East,923,Guildford,Horsham
+South East,924,Guildford,Mole Valley
+South East,925,Guildford,South West Surrey
+South East,926,Guildford,Surrey Heath
+South East,927,Guildford,Woking
+South East,928,Havant,Meon Valley
+South East,929,Havant,Portsmouth North
+South East,930,Horsham,Mid Sussex
+South East,931,Horsham,Mole Valley
+South East,932,Henley,Maidenhead
+South East,933,Henley,Oxford East
+South East,934,Henley,Oxford West and Abingdon
+South East,935,Henley,Newbury
+South East,936,Henley,Reading East
+South East,937,Henley,Reading West
+South East,938,Henley,Wantage
+South East,939,Henley,Witney
+South East,940,Henley,Wycombe
+South East,941,Lewes,Mid Sussex
+South East,942,Lewes,Wealden
+South East,943,Maidenhead,Reading East
+South East,944,Maidenhead,Windsor
+South East,945,Maidenhead,Wokingham
+South East,946,Maidenhead,Wycombe
+South East,947,Maidstone and The Weald,Tunbridge Wells
+South East,948,Maidstone and The Weald,Tonbridge and Malling
+South East,949,Meon Valley,Portsmouth North
+South East,950,Meon Valley,Winchester
+South East,951,Mid Sussex,Wealden
+South East,952,Milton Keynes North,Milton Keynes South
+South East,953,Mole Valley,Reigate
+South East,954,Mole Valley,Runnymede and Weybridge
+South East,955,Mole Valley,Woking
+South East,956,New Forest East,New Forest West
+South East,957,New Forest East,Romsey and Southampton North
+South East,958,Oxford East,Oxford West and Abingdon
+South East,959,Oxford West and Abingdon,Wantage
+South East,960,Oxford West and Abingdon,Witney
+South East,961,North Thanet,South Thanet
+South East,962,North West Hampshire,Newbury
+South East,963,North West Hampshire,North East Hampshire
+South East,964,North West Hampshire,Romsey and Southampton North
+South East,965,North West Hampshire,Winchester
+South East,966,Newbury,North East Hampshire
+South East,967,Newbury,Reading West
+South East,968,Newbury,Wantage
+South East,969,Newbury,Wokingham
+South East,970,North East Hampshire,South West Surrey
+South East,971,North East Hampshire,Winchester
+South East,972,North East Hampshire,Wokingham
+South East,973,Portsmouth North,Portsmouth South
+South East,974,Reading East,Reading West
+South East,975,Reading East,Wokingham
+South East,976,Reading West,Wokingham
+South East,977,Romsey and Southampton North,"Southampton, Itchen"
+South East,978,Romsey and Southampton North,"Southampton, Test"
+South East,979,Romsey and Southampton North,Winchester
+South East,980,Runnymede and Weybridge,Spelthorne
+South East,981,Runnymede and Weybridge,Surrey Heath
+South East,982,Runnymede and Weybridge,Windsor
+South East,983,Runnymede and Weybridge,Woking
+South East,984,Sevenoaks,Tonbridge and Malling
+South East,985,South West Surrey,Surrey Heath
+South East,986,"Southampton, Itchen","Southampton, Test"
+South East,987,Spelthorne,Windsor
+South East,988,Slough,Windsor
+South East,989,Surrey Heath,Windsor
+South East,990,Surrey Heath,Woking
+South East,991,Wantage,Witney
+South East,992,Wealden,Tunbridge Wells
+South East,993,Wealden,Tonbridge and Malling
+South East,994,Tunbridge Wells,Tonbridge and Malling
+South East,995,Windsor,Wokingham
+South West,996,Bath,North East Somerset
+South West,997,Bournemouth East,Bournemouth West
+South West,998,Bournemouth East,Christchurch
+South West,999,Bournemouth West,Christchurch
+South West,1000,Bournemouth West,Mid Dorset and North Poole
+South West,1001,Bournemouth West,Poole
+South West,1002,Bridgwater and West Somerset,North Devon
+South West,1003,Bridgwater and West Somerset,Somerton and Frome
+South West,1004,Bridgwater and West Somerset,Taunton Deane
+South West,1005,Bridgwater and West Somerset,Wells
+South West,1006,Bridgwater and West Somerset,Tiverton and Honiton
+South West,1007,Bristol East,Bristol North West
+South West,1008,Bristol East,Bristol South
+South West,1009,Bristol East,Bristol West
+South West,1010,Bristol East,Filton and Bradley Stoke
+South West,1011,Bristol East,Kingswood
+South West,1012,Bristol East,North East Somerset
+South West,1013,Bristol North West,Bristol West
+South West,1014,Bristol North West,Filton and Bradley Stoke
+South West,1015,Bristol North West,North Somerset
+South West,1016,Bristol South,Bristol West
+South West,1017,Bristol South,North Somerset
+South West,1018,Bristol South,North East Somerset
+South West,1019,Bristol West,North Somerset
+South West,1020,Camborne and Redruth,St. Ives
+South West,1021,Camborne and Redruth,Truro and Falmouth
+South West,1022,Central Devon,East Devon
+South West,1023,Central Devon,Exeter
+South West,1024,Central Devon,Newton Abbot
+South West,1025,Central Devon,North Devon
+South West,1026,Central Devon,Torridge and West Devon
+South West,1027,Central Devon,Totnes
+South West,1028,Central Devon,Tiverton and Honiton
+South West,1029,Cheltenham,Tewkesbury
+South West,1030,Cheltenham,The Cotswolds
+South West,1031,Chippenham,Devizes
+South West,1032,Chippenham,North Wiltshire
+South West,1033,Chippenham,North East Somerset
+South West,1034,Chippenham,South West Wiltshire
+South West,1035,Chippenham,Somerton and Frome
+South West,1036,Christchurch,Mid Dorset and North Poole
+South West,1037,Christchurch,North Dorset
+South West,1038,East Devon,Exeter
+South West,1039,East Devon,Tiverton and Honiton
+South West,1040,Devizes,North Wiltshire
+South West,1041,Devizes,Salisbury
+South West,1042,Devizes,South West Wiltshire
+South West,1043,Devizes,South Swindon
+South West,1044,Filton and Bradley Stoke,Kingswood
+South West,1045,Filton and Bradley Stoke,Thornbury and Yate
+South West,1046,Forest of Dean,Gloucester
+South West,1047,Forest of Dean,Tewkesbury
+South West,1048,Gloucester,Stroud
+South West,1049,Gloucester,Tewkesbury
+South West,1050,Kingswood,North East Somerset
+South West,1051,Kingswood,Thornbury and Yate
+South West,1052,Mid Dorset and North Poole,North Dorset
+South West,1053,Mid Dorset and North Poole,Poole
+South West,1054,Mid Dorset and North Poole,South Dorset
+South West,1055,North Wiltshire,North Swindon
+South West,1056,North Wiltshire,North East Somerset
+South West,1057,North Wiltshire,South Swindon
+South West,1058,North Wiltshire,The Cotswolds
+South West,1059,North Wiltshire,Thornbury and Yate
+South West,1060,"Plymouth, Moor View","Plymouth, Sutton and Devonport"
+South West,1061,"Plymouth, Moor View",South West Devon
+South West,1062,North Somerset,North East Somerset
+South West,1063,North Somerset,Weston-Super-Mare
+South West,1064,North Swindon,South Swindon
+South West,1065,North Swindon,The Cotswolds
+South West,1066,Newton Abbot,Totnes
+South West,1067,Newton Abbot,Torbay
+South West,1068,North Cornwall,South East Cornwall
+South West,1069,North Cornwall,St. Austell and Newquay
+South West,1070,North Cornwall,Torridge and West Devon
+South West,1071,North Devon,Torridge and West Devon
+South West,1072,North Devon,Tiverton and Honiton
+South West,1073,North Dorset,Salisbury
+South West,1074,North Dorset,South West Wiltshire
+South West,1075,North Dorset,Somerton and Frome
+South West,1076,North Dorset,South Dorset
+South West,1077,North Dorset,West Dorset
+South West,1078,North East Somerset,Somerton and Frome
+South West,1079,North East Somerset,Wells
+South West,1080,North East Somerset,Thornbury and Yate
+South West,1081,North East Somerset,Weston-Super-Mare
+South West,1082,Salisbury,South West Wiltshire
+South West,1083,South West Devon,Torridge and West Devon
+South West,1084,South West Devon,Totnes
+South West,1085,South West Wiltshire,Somerton and Frome
+South West,1086,Somerton and Frome,Taunton Deane
+South West,1087,Somerton and Frome,Wells
+South West,1088,Somerton and Frome,West Dorset
+South West,1089,Somerton and Frome,Yeovil
+South West,1090,South Dorset,West Dorset
+South West,1091,South East Cornwall,St. Austell and Newquay
+South West,1092,South East Cornwall,Torridge and West Devon
+South West,1093,St. Austell and Newquay,Truro and Falmouth
+South West,1094,Stroud,Tewkesbury
+South West,1095,Stroud,The Cotswolds
+South West,1096,Stroud,Thornbury and Yate
+South West,1097,Taunton Deane,Tiverton and Honiton
+South West,1098,Taunton Deane,Yeovil
+South West,1099,Wells,Weston-Super-Mare
+South West,1100,Torridge and West Devon,Totnes
+South West,1101,Totnes,Torbay
+South West,1102,Tewkesbury,The Cotswolds
+South West,1103,The Cotswolds,Thornbury and Yate
+South West,1104,Tiverton and Honiton,West Dorset
+South West,1105,Tiverton and Honiton,Yeovil
+South West,1106,West Dorset,Yeovil
+Wales,1107,Delyn,Alyn and Deeside
+Wales,1108,Delyn,Clwyd West
+Wales,1109,Delyn,Vale of Clwyd
+Wales,1110,Alyn and Deeside,Wrexham
+Wales,1111,Alyn and Deeside,Clwyd West
+Wales,1112,Alyn and Deeside,Clwyd South
+Wales,1113,Wrexham,Clwyd South
+Wales,1114,Llanelli,Gower
+Wales,1115,Llanelli,Carmarthen East and Dinefwr
+Wales,1116,Gower,Swansea West
+Wales,1117,Gower,Swansea East
+Wales,1118,Gower,Carmarthen East and Dinefwr
+Wales,1119,Gower,Neath
+Wales,1120,Swansea West,Swansea East
+Wales,1121,Swansea East,Aberavon
+Wales,1122,Swansea East,Neath
+Wales,1123,Aberavon,Rhondda
+Wales,1124,Aberavon,Bridgend
+Wales,1125,Aberavon,Ogmore
+Wales,1126,Aberavon,Neath
+Wales,1127,Aberavon,Cynon Valley
+Wales,1128,Cardiff Central,Cardiff North
+Wales,1129,Cardiff Central,Cardiff West
+Wales,1130,Cardiff Central,Cardiff South and Penarth
+Wales,1131,Cardiff North,Newport West
+Wales,1132,Cardiff North,Pontypridd
+Wales,1133,Cardiff North,Caerphilly
+Wales,1134,Cardiff North,Cardiff West
+Wales,1135,Cardiff North,Cardiff South and Penarth
+Wales,1136,Rhondda,Ogmore
+Wales,1137,Rhondda,Pontypridd
+Wales,1138,Rhondda,Neath
+Wales,1139,Rhondda,Cynon Valley
+Wales,1140,Torfaen,Monmouth
+Wales,1141,Torfaen,Newport West
+Wales,1142,Torfaen,Blaenau Gwent
+Wales,1143,Torfaen,Islwyn
+Wales,1144,Monmouth,Newport East
+Wales,1145,Monmouth,Newport West
+Wales,1146,Monmouth,Blaenau Gwent
+Wales,1147,Monmouth,Brecon and Radnorshire
+Wales,1148,Newport East,Newport West
+Wales,1149,Newport West,Caerphilly
+Wales,1150,Newport West,Islwyn
+Wales,1151,Newport West,Cardiff South and Penarth
+Wales,1152,Arfon,Aberconwy
+Wales,1153,Arfon,Dwyfor Meirionnydd
+Wales,1154,Aberconwy,Clwyd West
+Wales,1155,Aberconwy,Dwyfor Meirionnydd
+Wales,1156,Clwyd West,Vale of Clwyd
+Wales,1157,Clwyd West,Dwyfor Meirionnydd
+Wales,1158,Clwyd West,Clwyd South
+Wales,1159,Merthyr Tydfil and Rhymney,Blaenau Gwent
+Wales,1160,Merthyr Tydfil and Rhymney,Caerphilly
+Wales,1161,Merthyr Tydfil and Rhymney,Islwyn
+Wales,1162,Merthyr Tydfil and Rhymney,Brecon and Radnorshire
+Wales,1163,Merthyr Tydfil and Rhymney,Cynon Valley
+Wales,1164,Blaenau Gwent,Islwyn
+Wales,1165,Blaenau Gwent,Brecon and Radnorshire
+Wales,1166,Bridgend,Ogmore
+Wales,1167,Bridgend,Vale of Glamorgan
+Wales,1168,Ogmore,Pontypridd
+Wales,1169,Ogmore,Vale of Glamorgan
+Wales,1170,Pontypridd,Caerphilly
+Wales,1171,Pontypridd,Vale of Glamorgan
+Wales,1172,Pontypridd,Cardiff West
+Wales,1173,Pontypridd,Cynon Valley
+Wales,1174,Caerphilly,Islwyn
+Wales,1175,Caerphilly,Cynon Valley
+Wales,1176,Vale of Glamorgan,Cardiff West
+Wales,1177,Vale of Glamorgan,Cardiff South and Penarth
+Wales,1178,Cardiff West,Cardiff South and Penarth
+Wales,1179,Dwyfor Meirionnydd,Clwyd South
+Wales,1180,Dwyfor Meirionnydd,Montgomeryshire
+Wales,1181,Clwyd South,Montgomeryshire
+Wales,1182,Montgomeryshire,Ceredigion
+Wales,1183,Montgomeryshire,Brecon and Radnorshire
+Wales,1184,Ceredigion,Preseli Pembrokeshire
+Wales,1185,Ceredigion,Carmarthen East and Dinefwr
+Wales,1186,Ceredigion,Brecon and Radnorshire
+Wales,1187,Preseli Pembrokeshire,Carmarthen West and South Pembrokeshire
+Wales,1188,Preseli Pembrokeshire,Carmarthen East and Dinefwr
+Wales,1189,Carmarthen West and South Pembrokeshire,Carmarthen East and Dinefwr
+Wales,1190,Carmarthen East and Dinefwr,Brecon and Radnorshire
+Wales,1191,Carmarthen East and Dinefwr,Neath
+Wales,1192,Brecon and Radnorshire,Neath
+Wales,1193,Brecon and Radnorshire,Cynon Valley
+Wales,1194,Neath,Cynon Valley
+West Midlands,1195,"Birmingham, Edgbaston","Birmingham, Hall Green"
+West Midlands,1196,"Birmingham, Edgbaston","Birmingham, Ladywood"
+West Midlands,1197,"Birmingham, Edgbaston","Birmingham, Northfield"
+West Midlands,1198,"Birmingham, Edgbaston","Birmingham, Selly Oak"
+West Midlands,1199,"Birmingham, Edgbaston",Bromsgrove
+West Midlands,1200,"Birmingham, Edgbaston",Halesowen and Rowley Regis
+West Midlands,1201,"Birmingham, Edgbaston",Warley
+West Midlands,1202,"Birmingham, Erdington","Birmingham, Hodge Hill"
+West Midlands,1203,"Birmingham, Erdington","Birmingham, Ladywood"
+West Midlands,1204,"Birmingham, Erdington","Birmingham, Perry Barr"
+West Midlands,1205,"Birmingham, Erdington",Meriden
+West Midlands,1206,"Birmingham, Erdington",Sutton Coldfield
+West Midlands,1207,"Birmingham, Hall Green","Birmingham, Ladywood"
+West Midlands,1208,"Birmingham, Hall Green","Birmingham, Selly Oak"
+West Midlands,1209,"Birmingham, Hall Green","Birmingham, Yardley"
+West Midlands,1210,"Birmingham, Hall Green",Solihull
+West Midlands,1211,"Birmingham, Hodge Hill","Birmingham, Ladywood"
+West Midlands,1212,"Birmingham, Hodge Hill","Birmingham, Yardley"
+West Midlands,1213,"Birmingham, Hodge Hill",Meriden
+West Midlands,1214,"Birmingham, Ladywood","Birmingham, Perry Barr"
+West Midlands,1215,"Birmingham, Ladywood","Birmingham, Yardley"
+West Midlands,1216,"Birmingham, Ladywood",Warley
+West Midlands,1217,"Birmingham, Ladywood",West Bromwich East
+West Midlands,1218,"Birmingham, Northfield","Birmingham, Selly Oak"
+West Midlands,1219,"Birmingham, Northfield",Bromsgrove
+West Midlands,1220,"Birmingham, Perry Barr",Aldridge-Brownhills
+West Midlands,1221,"Birmingham, Perry Barr",Sutton Coldfield
+West Midlands,1222,"Birmingham, Perry Barr",Walsall South
+West Midlands,1223,"Birmingham, Perry Barr",West Bromwich East
+West Midlands,1224,"Birmingham, Selly Oak",Bromsgrove
+West Midlands,1225,"Birmingham, Selly Oak",Solihull
+West Midlands,1226,"Birmingham, Yardley",Meriden
+West Midlands,1227,"Birmingham, Yardley",Solihull
+West Midlands,1228,Aldridge-Brownhills,Cannock Chase
+West Midlands,1229,Aldridge-Brownhills,Lichfield
+West Midlands,1230,Aldridge-Brownhills,South Staffordshire
+West Midlands,1231,Aldridge-Brownhills,Sutton Coldfield
+West Midlands,1232,Aldridge-Brownhills,Tamworth
+West Midlands,1233,Aldridge-Brownhills,Walsall North
+West Midlands,1234,Aldridge-Brownhills,Walsall South
+West Midlands,1235,Bromsgrove,Halesowen and Rowley Regis
+West Midlands,1236,Bromsgrove,Meriden
+West Midlands,1237,Bromsgrove,Mid Worcestershire
+West Midlands,1238,Bromsgrove,Redditch
+West Midlands,1239,Bromsgrove,South Staffordshire
+West Midlands,1240,Bromsgrove,Solihull
+West Midlands,1241,Bromsgrove,Stourbridge
+West Midlands,1242,Bromsgrove,Stratford-on-Avon
+West Midlands,1243,Bromsgrove,Wyre Forest
+West Midlands,1244,Burton,Lichfield
+West Midlands,1245,Burton,Staffordshire Moorlands
+West Midlands,1246,Burton,Stone
+West Midlands,1247,Cannock Chase,Lichfield
+West Midlands,1248,Cannock Chase,South Staffordshire
+West Midlands,1249,Cannock Chase,Stafford
+West Midlands,1250,Coventry North West,Coventry South
+West Midlands,1251,Coventry North West,Coventry North East
+West Midlands,1252,Coventry North West,Meriden
+West Midlands,1253,Coventry North West,North Warwickshire
+West Midlands,1254,Coventry South,Coventry North East
+West Midlands,1255,Coventry South,Kenilworth and Southam
+West Midlands,1256,Coventry South,Meriden
+West Midlands,1257,Coventry South,Rugby
+West Midlands,1258,Coventry North East,North Warwickshire
+West Midlands,1259,Coventry North East,Rugby
+West Midlands,1260,Dudley North,Dudley South
+West Midlands,1261,Dudley North,Halesowen and Rowley Regis
+West Midlands,1262,Dudley North,South Staffordshire
+West Midlands,1263,Dudley North,West Bromwich West
+West Midlands,1264,Dudley North,Wolverhampton South East
+West Midlands,1265,Dudley South,Halesowen and Rowley Regis
+West Midlands,1266,Dudley South,South Staffordshire
+West Midlands,1267,Dudley South,Stourbridge
+West Midlands,1268,Halesowen and Rowley Regis,Stourbridge
+West Midlands,1269,Halesowen and Rowley Regis,Warley
+West Midlands,1270,Halesowen and Rowley Regis,West Bromwich West
+West Midlands,1271,Hereford and South Herefordshire,North Herefordshire
+West Midlands,1272,Kenilworth and Southam,Meriden
+West Midlands,1273,Kenilworth and Southam,Rugby
+West Midlands,1274,Kenilworth and Southam,Stratford-on-Avon
+West Midlands,1275,Kenilworth and Southam,Warwick and Leamington
+West Midlands,1276,Lichfield,Stafford
+West Midlands,1277,Lichfield,Stone
+West Midlands,1278,Lichfield,Tamworth
+West Midlands,1279,Ludlow,North Herefordshire
+West Midlands,1280,Ludlow,Shrewsbury and Atcham
+West Midlands,1281,Ludlow,South Staffordshire
+West Midlands,1282,Ludlow,Telford
+West Midlands,1283,Ludlow,The Wrekin
+West Midlands,1284,Ludlow,West Worcestershire
+West Midlands,1285,Ludlow,Wyre Forest
+West Midlands,1286,Meriden,North Warwickshire
+West Midlands,1287,Meriden,Solihull
+West Midlands,1288,Meriden,Stratford-on-Avon
+West Midlands,1289,Meriden,Sutton Coldfield
+West Midlands,1290,Mid Worcestershire,Redditch
+West Midlands,1291,Mid Worcestershire,Stratford-on-Avon
+West Midlands,1292,Mid Worcestershire,West Worcestershire
+West Midlands,1293,Mid Worcestershire,Worcester
+West Midlands,1294,Mid Worcestershire,Wyre Forest
+West Midlands,1295,Nuneaton,North Warwickshire
+West Midlands,1296,Nuneaton,Rugby
+West Midlands,1297,North Warwickshire,Rugby
+West Midlands,1298,North Warwickshire,Sutton Coldfield
+West Midlands,1299,North Warwickshire,Tamworth
+West Midlands,1300,Newcastle-under-Lyme,Stoke-on-Trent Central
+West Midlands,1301,Newcastle-under-Lyme,Stoke-on-Trent North
+West Midlands,1302,Newcastle-under-Lyme,Stoke-on-Trent South
+West Midlands,1303,Newcastle-under-Lyme,Stone
+West Midlands,1304,North Herefordshire,West Worcestershire
+West Midlands,1305,North Shropshire,Shrewsbury and Atcham
+West Midlands,1306,North Shropshire,Stone
+West Midlands,1307,North Shropshire,The Wrekin
+West Midlands,1308,Redditch,Stratford-on-Avon
+West Midlands,1309,Shrewsbury and Atcham,Telford
+West Midlands,1310,Shrewsbury and Atcham,The Wrekin
+West Midlands,1311,South Staffordshire,Stafford
+West Midlands,1312,South Staffordshire,Stourbridge
+West Midlands,1313,South Staffordshire,Walsall North
+West Midlands,1314,South Staffordshire,The Wrekin
+West Midlands,1315,South Staffordshire,Wolverhampton North East
+West Midlands,1316,South Staffordshire,Wolverhampton South East
+West Midlands,1317,South Staffordshire,Wolverhampton South West
+West Midlands,1318,South Staffordshire,Wyre Forest
+West Midlands,1319,Stafford,Stone
+West Midlands,1320,Stafford,The Wrekin
+West Midlands,1321,Staffordshire Moorlands,Stoke-on-Trent Central
+West Midlands,1322,Staffordshire Moorlands,Stoke-on-Trent North
+West Midlands,1323,Staffordshire Moorlands,Stoke-on-Trent South
+West Midlands,1324,Staffordshire Moorlands,Stone
+West Midlands,1325,Stoke-on-Trent Central,Stoke-on-Trent North
+West Midlands,1326,Stoke-on-Trent Central,Stoke-on-Trent South
+West Midlands,1327,Stoke-on-Trent South,Stone
+West Midlands,1328,Stone,The Wrekin
+West Midlands,1329,Stratford-on-Avon,Warwick and Leamington
+West Midlands,1330,Sutton Coldfield,Tamworth
+West Midlands,1331,Telford,The Wrekin
+West Midlands,1332,Walsall North,Walsall South
+West Midlands,1333,Walsall North,Wolverhampton North East
+West Midlands,1334,Walsall North,Wolverhampton South East
+West Midlands,1335,Walsall South,West Bromwich East
+West Midlands,1336,Walsall South,West Bromwich West
+West Midlands,1337,Walsall South,Wolverhampton South East
+West Midlands,1338,Warley,West Bromwich East
+West Midlands,1339,Warley,West Bromwich West
+West Midlands,1340,West Bromwich East,West Bromwich West
+West Midlands,1341,West Bromwich West,Wolverhampton South East
+West Midlands,1342,West Worcestershire,Worcester
+West Midlands,1343,West Worcestershire,Wyre Forest
+West Midlands,1344,Wolverhampton North East,Wolverhampton South East
+West Midlands,1345,Wolverhampton North East,Wolverhampton South West
+West Midlands,1346,Wolverhampton South East,Wolverhampton South West
+Yorkshire and The Humber,1347,Barnsley Central,Barnsley East
+Yorkshire and The Humber,1348,Barnsley Central,Hemsworth
+Yorkshire and The Humber,1349,Barnsley Central,Penistone and Stocksbridge
+Yorkshire and The Humber,1350,Barnsley Central,Wakefield
+Yorkshire and The Humber,1351,Barnsley East,Doncaster North
+Yorkshire and The Humber,1352,Barnsley East,Hemsworth
+Yorkshire and The Humber,1353,Barnsley East,Penistone and Stocksbridge
+Yorkshire and The Humber,1354,Barnsley East,Wentworth and Dearne
+Yorkshire and The Humber,1355,Batley and Spen,Bradford South
+Yorkshire and The Humber,1356,Batley and Spen,Calder Valley
+Yorkshire and The Humber,1357,Batley and Spen,Dewsbury
+Yorkshire and The Humber,1358,Batley and Spen,Huddersfield
+Yorkshire and The Humber,1359,Batley and Spen,Morley and Outwood
+Yorkshire and The Humber,1360,Batley and Spen,Wakefield
+Yorkshire and The Humber,1361,Beverley and Holderness,East Yorkshire
+Yorkshire and The Humber,1362,Beverley and Holderness,Haltemprice and Howden
+Yorkshire and The Humber,1363,Beverley and Holderness,Kingston upon Hull East
+Yorkshire and The Humber,1364,Beverley and Holderness,Kingston upon Hull North
+Yorkshire and The Humber,1365,Bradford East,Bradford South
+Yorkshire and The Humber,1366,Bradford East,Bradford West
+Yorkshire and The Humber,1367,Bradford East,Pudsey
+Yorkshire and The Humber,1368,Bradford East,Shipley
+Yorkshire and The Humber,1369,Bradford South,Bradford West
+Yorkshire and The Humber,1370,Bradford South,Calder Valley
+Yorkshire and The Humber,1371,Bradford South,Halifax
+Yorkshire and The Humber,1372,Bradford South,Leeds West
+Yorkshire and The Humber,1373,Bradford South,Morley and Outwood
+Yorkshire and The Humber,1374,Bradford South,Pudsey
+Yorkshire and The Humber,1375,Bradford West,Halifax
+Yorkshire and The Humber,1376,Bradford West,Shipley
+Yorkshire and The Humber,1377,Brigg and Goole,Cleethorpes
+Yorkshire and The Humber,1378,Brigg and Goole,Don Valley
+Yorkshire and The Humber,1379,Brigg and Goole,Doncaster North
+Yorkshire and The Humber,1380,Brigg and Goole,Haltemprice and Howden
+Yorkshire and The Humber,1381,Brigg and Goole,Scunthorpe
+Yorkshire and The Humber,1382,Brigg and Goole,Selby and Ainsty
+Yorkshire and The Humber,1383,Calder Valley,Colne Valley
+Yorkshire and The Humber,1384,Calder Valley,Halifax
+Yorkshire and The Humber,1385,Calder Valley,Huddersfield
+Yorkshire and The Humber,1386,Calder Valley,Keighley
+Yorkshire and The Humber,1387,Cleethorpes,Great Grimsby
+Yorkshire and The Humber,1388,Colne Valley,Dewsbury
+Yorkshire and The Humber,1389,Colne Valley,Huddersfield
+Yorkshire and The Humber,1390,Colne Valley,Penistone and Stocksbridge
+Yorkshire and The Humber,1391,Dewsbury,Huddersfield
+Yorkshire and The Humber,1392,Dewsbury,Penistone and Stocksbridge
+Yorkshire and The Humber,1393,Dewsbury,Wakefield
+Yorkshire and The Humber,1394,Don Valley,Doncaster Central
+Yorkshire and The Humber,1395,Don Valley,Doncaster North
+Yorkshire and The Humber,1396,Don Valley,Rother Valley
+Yorkshire and The Humber,1397,Don Valley,Wentworth and Dearne
+Yorkshire and The Humber,1398,Doncaster Central,Doncaster North
+Yorkshire and The Humber,1399,Doncaster North,Hemsworth
+Yorkshire and The Humber,1400,Doncaster North,Selby and Ainsty
+Yorkshire and The Humber,1401,Doncaster North,Wentworth and Dearne
+Yorkshire and The Humber,1402,East Yorkshire,Haltemprice and Howden
+Yorkshire and The Humber,1403,East Yorkshire,Selby and Ainsty
+Yorkshire and The Humber,1404,East Yorkshire,Thirsk and Malton
+Yorkshire and The Humber,1405,East Yorkshire,York Outer
+Yorkshire and The Humber,1406,Elmet and Rothwell,Leeds Central
+Yorkshire and The Humber,1407,Elmet and Rothwell,Leeds East
+Yorkshire and The Humber,1408,Elmet and Rothwell,Leeds North East
+Yorkshire and The Humber,1409,Elmet and Rothwell,Leeds North West
+Yorkshire and The Humber,1410,Elmet and Rothwell,Morley and Outwood
+Yorkshire and The Humber,1411,Elmet and Rothwell,"Normanton, Pontefract and Castleford"
+Yorkshire and The Humber,1412,Elmet and Rothwell,Selby and Ainsty
+Yorkshire and The Humber,1413,Halifax,Keighley
+Yorkshire and The Humber,1414,Halifax,Shipley
+Yorkshire and The Humber,1415,Haltemprice and Howden,Kingston upon Hull North
+Yorkshire and The Humber,1416,Haltemprice and Howden,Kingston upon Hull West and Hessle
+Yorkshire and The Humber,1417,Haltemprice and Howden,Selby and Ainsty
+Yorkshire and The Humber,1418,Harrogate and Knaresborough,Selby and Ainsty
+Yorkshire and The Humber,1419,Harrogate and Knaresborough,Skipton and Ripon
+Yorkshire and The Humber,1420,Harrogate and Knaresborough,Thirsk and Malton
+Yorkshire and The Humber,1421,Hemsworth,"Normanton, Pontefract and Castleford"
+Yorkshire and The Humber,1422,Hemsworth,Selby and Ainsty
+Yorkshire and The Humber,1423,Hemsworth,Wakefield
+Yorkshire and The Humber,1424,Kingston upon Hull East,Kingston upon Hull North
+Yorkshire and The Humber,1425,Kingston upon Hull North,Kingston upon Hull West and Hessle
+Yorkshire and The Humber,1426,Leeds Central,Leeds East
+Yorkshire and The Humber,1427,Leeds Central,Leeds North East
+Yorkshire and The Humber,1428,Leeds Central,Leeds North West
+Yorkshire and The Humber,1429,Leeds Central,Leeds West
+Yorkshire and The Humber,1430,Leeds Central,Morley and Outwood
+Yorkshire and The Humber,1431,Leeds East,Leeds North East
+Yorkshire and The Humber,1432,Leeds North East,Leeds North West
+Yorkshire and The Humber,1433,Leeds North West,Leeds West
+Yorkshire and The Humber,1434,Leeds North West,Pudsey
+Yorkshire and The Humber,1435,Leeds North West,Selby and Ainsty
+Yorkshire and The Humber,1436,Leeds North West,Shipley
+Yorkshire and The Humber,1437,Leeds North West,Skipton and Ripon
+Yorkshire and The Humber,1438,Leeds West,Morley and Outwood
+Yorkshire and The Humber,1439,Leeds West,Pudsey
+Yorkshire and The Humber,1440,Keighley,Shipley
+Yorkshire and The Humber,1441,Keighley,Skipton and Ripon
+Yorkshire and The Humber,1442,Morley and Outwood,"Normanton, Pontefract and Castleford"
+Yorkshire and The Humber,1443,Morley and Outwood,Wakefield
+Yorkshire and The Humber,1444,Penistone and Stocksbridge,Rotherham
+Yorkshire and The Humber,1445,Penistone and Stocksbridge,"Sheffield, Brightside and Hillsborough"
+Yorkshire and The Humber,1446,Penistone and Stocksbridge,"Sheffield, Hallam"
+Yorkshire and The Humber,1447,Penistone and Stocksbridge,Wentworth and Dearne
+Yorkshire and The Humber,1448,Penistone and Stocksbridge,Wakefield
+Yorkshire and The Humber,1449,"Normanton, Pontefract and Castleford",Selby and Ainsty
+Yorkshire and The Humber,1450,"Normanton, Pontefract and Castleford",Wakefield
+Yorkshire and The Humber,1451,Pudsey,Shipley
+Yorkshire and The Humber,1452,Richmond (Yorks),Scarborough and Whitby
+Yorkshire and The Humber,1453,Richmond (Yorks),Skipton and Ripon
+Yorkshire and The Humber,1454,Richmond (Yorks),Thirsk and Malton
+Yorkshire and The Humber,1455,Rother Valley,Rotherham
+Yorkshire and The Humber,1456,Rother Valley,Sheffield South East
+Yorkshire and The Humber,1457,Rother Valley,Wentworth and Dearne
+Yorkshire and The Humber,1458,Rotherham,Sheffield South East
+Yorkshire and The Humber,1459,Rotherham,"Sheffield, Brightside and Hillsborough"
+Yorkshire and The Humber,1460,Rotherham,Wentworth and Dearne
+Yorkshire and The Humber,1461,Scarborough and Whitby,Thirsk and Malton
+Yorkshire and The Humber,1462,Selby and Ainsty,Skipton and Ripon
+Yorkshire and The Humber,1463,Selby and Ainsty,Thirsk and Malton
+Yorkshire and The Humber,1464,Selby and Ainsty,York Outer
+Yorkshire and The Humber,1465,Sheffield Central,Sheffield South East
+Yorkshire and The Humber,1466,Sheffield Central,"Sheffield, Brightside and Hillsborough"
+Yorkshire and The Humber,1467,Sheffield Central,"Sheffield, Hallam"
+Yorkshire and The Humber,1468,Sheffield Central,"Sheffield, Heeley"
+Yorkshire and The Humber,1469,Sheffield South East,"Sheffield, Brightside and Hillsborough"
+Yorkshire and The Humber,1470,Sheffield South East,"Sheffield, Heeley"
+Yorkshire and The Humber,1471,"Sheffield, Brightside and Hillsborough","Sheffield, Hallam"
+Yorkshire and The Humber,1472,"Sheffield, Hallam","Sheffield, Heeley"
+Yorkshire and The Humber,1473,Shipley,Skipton and Ripon
+Yorkshire and The Humber,1474,Skipton and Ripon,Thirsk and Malton
+Yorkshire and The Humber,1475,Thirsk and Malton,York Outer
+Yorkshire and The Humber,1476,York Central,York Outer
