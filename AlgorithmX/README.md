@@ -20,4 +20,4 @@ As stated before we will to form the merged constituencies we will use the [Exac
     which should read something like `'3.5.3 (928a4f70d3de, Feb 08 2019, 10:42:58)\n[PyPy 7.0.0 with GCC 6.2.0 20160901]'`.
 
 
-Many thanks to Giovanni De Gasperis who set up the initial code to run a Jupyter notebook with a PyPy kernel [here](https://github.com/giodegas/docker-pypy-jupyter). 
+Many thanks to Giovanni De Gasperis who set up the initial code to run a Jupyter notebook with a PyPy kernel [here](https://github.com/giodegas/docker-pypy-jupyter) and [here](https://hub.docker.com/r/giodegas/pypy-jupyter). 
