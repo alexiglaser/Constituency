@@ -28,6 +28,8 @@ RUN rm -rf /var/lib/apt/lists/*
 
 RUN pip install --upgrade 'pip'
 RUN pip install 'pandas==0.25.3'
+RUN pip install "joblib==0.14.1"
+RUN pip install "interruptingcow==0.8"
 # RUN pip install 'time'
 
 # install latest Jupyterlab
