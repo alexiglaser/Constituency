@@ -1,6 +1,8 @@
-# AlgorithmX
+# Algorithm X
 
-As stated before we will to form the merged constituencies we will use the [Exact Cover](https://en.wikipedia.org/wiki/Exact_cover) problem and [Knuth's Algorithm X](https://en.wikipedia.org/wiki/Knuth%27s_Algorithm_X) to solve it. In order to speed things up we found taht using a [PyPy](https://en.wikipedia.org/wiki/PyPy) kernel sped things up considerably (up to 4-5 times faster for some of the larger problems). As the PyPy kernel is a different implementation of Python we needed to have a separate set up for this part of the project.
+As stated before we will to form the merged constituencies we will use the [Exact Cover](https://en.wikipedia.org/wiki/Exact_cover) problem and [Knuth's Algorithm X](https://en.wikipedia.org/wiki/Knuth%27s_Algorithm_X) to solve it. The code should run in a standard Python setup so if you're happy to wait longer for results then feel free to ignore the instructions below and run the code as normal.
+
+In order to speed things up we found that using a [PyPy](https://en.wikipedia.org/wiki/PyPy) kernel sped things up considerably (up to 4-5 times faster for some of the larger problems). As the PyPy kernel is a different implementation of Python we needed to have a separate set up for this part of the project. 
 
 1. Once the Docker container has been built, run the container instance 
     ```
