@@ -66,6 +66,8 @@ def return_solutions(df, max_soln = 1e7, resampled=False, log_df_name=None):
                     for k in keys:
                         dict_solns2[k] = dict_solns[k]
                     sampled_solns = pd.DataFrame({'soln': dict_solns2}).reset_index(drop=True)
+                # Sort out the solutions at this point to save time later.
+                sampled_solns = sampled_solns.assign(soln = [list(np.sort(s)) for s in sampled_solns['soln']])
                 return soln_returned, sampled_solns, resampled
             else:
                 soln_returned = False
@@ -166,8 +168,9 @@ def remove_random_const(const_pairs, const_tris, const_quads, seats, region, n):
                     else:
                         removed['triplet'] = [*removed['triplet'], random_const['set_no'].iloc[0]]
                     to_remove = to_remove + to_remove_names(random_const)
-                    for name in name_cols2:
-                        df2 = df2[~df2[name].isin(to_remove)]
+                removed['triplet'] = list(np.sort(removed['triplet']))
+                for name in name_cols2:
+                    df2 = df2[~df2[name].isin(to_remove)]
             elif n % seats == 3:
                 random_const = const_tris.sample(1)
                 removed['triplet'] = random_const['set_no'].iloc[0]
@@ -210,9 +213,9 @@ def get_solns(const_pairs, const_tris, const_quads, seats, region, max_solns=1e6
         df = const_quads2
     name_cols = get_name_cols(df)
     # How many times should we rerun Algorithm X when we cannot return all solutions.
-    RERUN_COUNTER = 25 * (1 + (seats >= 4))
+    RERUN_COUNTER = 5 #* (1 + (seats >= 4))
     # How many times should we rerun Algorithm X when we have to remove different sized sets.
-    COUNTER = 25 * (1 + (seats >= 4))
+    COUNTER = 5 #* (1 + (seats >= 4))
     
     n = get_n(df, name_cols)
     r = region.replace(" ", "_")
@@ -245,6 +248,7 @@ def get_solns(const_pairs, const_tris, const_quads, seats, region, max_solns=1e6
         soln_dict = {}
         i = 0
         while i < COUNTER:
+            print(f"i: {i}")
             df, removed = remove_random_const(const_pairs2, const_tris2, const_quads2, seats, region, n)
             soln_returned, soln_dict[i], resampled = return_solutions(df, resampled=False, max_soln=max_solns, log_df_name=log_df_name)
             if soln_returned:
@@ -253,6 +257,7 @@ def get_solns(const_pairs, const_tris, const_quads, seats, region, max_solns=1e6
                     d[0] = soln_dict[i].copy()
                     j = 1
                     while j < RERUN_COUNTER and soln_returned:
+                        print(f"j: {j}")
                         if soln_returned:
                             j += 1
                             soln_returned, d[j], resampled = return_solutions(df, resampled=True, max_soln=max_solns, log_df_name=log_df_name)
