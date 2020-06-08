@@ -240,7 +240,10 @@ def get_solns(const_pairs, const_tris, const_quads, seats, region, max_solns=1e6
                             j += 1
                             soln_returned, d[j], resampled = return_solutions(df, resampled=True, max_soln=max_solns, log_df_name=log_df_name)
                     if soln_returned:
-                        solns = pd.concat(d)
+                        try:
+                            soln_dict[i] = pd.concat(d)
+                        except:
+                            log.warning(f"For region {region} with seats = {seats} we cannot concatenate.")
         else:
             log.warning(f"Issue with the {region} region, when we have {seats} seats there are no solutions returned.")
     else:
@@ -248,31 +251,48 @@ def get_solns(const_pairs, const_tris, const_quads, seats, region, max_solns=1e6
         soln_dict = {}
         i = 0
         while i < COUNTER:
-            print(f"i: {i}")
             df, removed = remove_random_const(const_pairs2, const_tris2, const_quads2, seats, region, n)
             soln_returned, soln_dict[i], resampled = return_solutions(df, resampled=False, max_soln=max_solns, log_df_name=log_df_name)
+            log.info(f"For j=0 we have soln_returned={soln_returned} and resampled={resampled}.")
             if soln_returned:
                 if resampled:
                     d = {}
                     d[0] = soln_dict[i].copy()
-                    j = 1
+                    try:
+                        d[0].to_csv(f"Logs/solns/soln_{r}_{seats}_d_0.csv", index=False)
+                    except:
+                        log.warning(f"For region {region} with seats = {seats} we cannot get a solution for d[0]")
+                    j = 0
                     while j < RERUN_COUNTER and soln_returned:
-                        print(f"j: {j}")
                         if soln_returned:
                             j += 1
                             soln_returned, d[j], resampled = return_solutions(df, resampled=True, max_soln=max_solns, log_df_name=log_df_name)
+                            log.info(f"For j={j} we have soln_returned={soln_returned} and resampled={resampled}.")
+                            try:
+                                d[j].to_csv(f"Logs/solns/soln_{r}_{seats}_d_{i}_{j}.csv", index=False)
+                            except:
+                                log.warning(f"For region {region} with seats = {seats} we cannot get a solution for d[0]")
                         else:
                             break
                     if soln_returned:
-                        soln_dict[i] = pd.concat(d)
+                        try:
+                            soln_dict[i] = pd.concat(d)
+                        except:
+                            log.warning(f"For region {region} with seats = {seats} we cannot concatenate.")
             if soln_returned:
-                # Add in the set_no's that were removed from the solutions
-                soln_dict[i][list(removed.keys())[0]] = str(list(removed.values())[0])
-                i += 1
-                solns = pd.concat(soln_dict)
-    if len(solns) > 0:
-        solns = solns.assign(region = region)
-#         # Sort the solutions (to save us having to do it later)
-#         solns = solns.assign(sorted_soln = [list(np.sort(t)) for t in solns['soln']])
-        solns.to_csv(file_name, index=False, compression='gzip')
-        log.info(f"Finished getting solutions for region {region} with {seats} seats")
+                try:
+                    # Add in the set_no's that were removed from the solutions
+                    soln_dict[i][list(removed.keys())[0]] = str(list(removed.values())[0])
+                    i += 1
+                    solns = pd.concat(soln_dict)
+                except:
+                    log.warning(f"For region {region} with seats = {seats} we cannot add in the removed solutions.")
+    try:
+        if len(solns) > 0:
+            solns = solns.assign(region = region)
+    #         # Sort the solutions (to save us having to do it later)
+    #         solns = solns.assign(sorted_soln = [list(np.sort(t)) for t in solns['soln']])
+            solns.to_csv(file_name, index=False, compression='gzip')
+            log.info(f"Finished getting solutions for region {region} with {seats} seats")
+    except:
+        log.warning(f"Cannot get solutions for region {region} with {seats} seats")
