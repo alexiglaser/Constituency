@@ -213,9 +213,9 @@ def get_solns(const_pairs, const_tris, const_quads, seats, region, max_solns=1e6
         df = const_quads2
     name_cols = get_name_cols(df)
     # How many times should we rerun Algorithm X when we cannot return all solutions.
-    RERUN_COUNTER = 5 #* (1 + (seats >= 4))
+    RERUN_COUNTER = 15 * (1 + (seats >= 4))
     # How many times should we rerun Algorithm X when we have to remove different sized sets.
-    COUNTER = 5 #* (1 + (seats >= 4))
+    COUNTER = 15 * (1 + (seats >= 4))
     
     n = get_n(df, name_cols)
     r = region.replace(" ", "_")
@@ -226,6 +226,7 @@ def get_solns(const_pairs, const_tris, const_quads, seats, region, max_solns=1e6
     log.info(f'Starting code for region {region} with {seats} seats.')
     if n % seats == 0:
         soln_returned, solns, resampled = return_solutions(df, resampled=False, max_soln=max_solns, log_df_name=log_df_name)
+        log.info(f"For n % seats == 0 we have soln_returned={soln_returned} and resampled={resampled}.")
         if soln_returned:
             if len(solns) <= 1:
                 log.warning(f"For the {region} region, when we have {seats} seats there are no solutions.")
@@ -234,16 +235,21 @@ def get_solns(const_pairs, const_tris, const_quads, seats, region, max_solns=1e6
                 if resampled:
                     d = {}
                     d[0] = solns.copy()
-                    j = 1
+                    j = 0
                     while j < RERUN_COUNTER and soln_returned:
                         if soln_returned:
                             j += 1
                             soln_returned, d[j], resampled = return_solutions(df, resampled=True, max_soln=max_solns, log_df_name=log_df_name)
+                            log.info(f"For j={j} we have soln_returned={soln_returned} and resampled={resampled}.")
                     if soln_returned:
                         try:
-                            soln_dict[i] = pd.concat(d)
+                            solns = pd.concat(d, ignore_index=True)
                         except:
                             log.warning(f"For region {region} with seats = {seats} we cannot concatenate.")
+                            for k in range(len(d)):
+                                f = f"Logs/check/soln_{r}_{seats}_d_{i}_{k}.csv"
+                                log.warning(f"{k}: {d[k].shape} saved to {f}")
+                                d[k].to_csv(f, index=False)
         else:
             log.warning(f"Issue with the {region} region, when we have {seats} seats there are no solutions returned.")
     else:
@@ -253,7 +259,7 @@ def get_solns(const_pairs, const_tris, const_quads, seats, region, max_solns=1e6
         while i < COUNTER:
             df, removed = remove_random_const(const_pairs2, const_tris2, const_quads2, seats, region, n)
             soln_returned, soln_dict[i], resampled = return_solutions(df, resampled=False, max_soln=max_solns, log_df_name=log_df_name)
-            log.info(f"For j=0 we have soln_returned={soln_returned} and resampled={resampled}.")
+            log.info(f"For i={i} we have soln_returned={soln_returned} and resampled={resampled}.")
             if soln_returned:
                 if resampled:
                     d = {}
@@ -276,17 +282,30 @@ def get_solns(const_pairs, const_tris, const_quads, seats, region, max_solns=1e6
                             break
                     if soln_returned:
                         try:
-                            soln_dict[i] = pd.concat(d)
+                            soln_dict[i] = pd.concat(d, ignore_index=True)
                         except:
                             log.warning(f"For region {region} with seats = {seats} we cannot concatenate.")
+                            for k in range(len(d)):
+                                f = f"Logs/check/soln_{r}_{seats}_d_{i}_{k}.csv"
+                                log.warning(f"{k}: {d[k].shape} saved to {f}")
+                                d[k].to_csv(f, index=False)
+                else:
+                    soln_dict[i].to_csv(f"Logs/solns/soln_{r}_{seats}_d_{i}.csv", index=False)
             if soln_returned:
                 try:
                     # Add in the set_no's that were removed from the solutions
                     soln_dict[i][list(removed.keys())[0]] = str(list(removed.values())[0])
                     i += 1
-                    solns = pd.concat(soln_dict)
                 except:
+                    for k in range(len(soln_dict)):
+                        log.warning(f"{k}: {soln_dict[k].shape}")
                     log.warning(f"For region {region} with seats = {seats} we cannot add in the removed solutions.")
+        try:
+            solns = pd.concat(soln_dict, ignore_index=True)
+        except:
+            for k in range(len(soln_dict)):
+                log.warning(f"{k}: {soln_dict[k].shape}")
+            log.warning(f"For region {region} with seats = {seats} we cannot concatenate solutions.")
     try:
         if len(solns) > 0:
             solns = solns.assign(region = region)
