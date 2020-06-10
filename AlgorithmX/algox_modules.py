@@ -213,9 +213,9 @@ def get_solns(const_pairs, const_tris, const_quads, seats, region, max_solns=1e6
         df = const_quads2
     name_cols = get_name_cols(df)
     # How many times should we rerun Algorithm X when we cannot return all solutions.
-    RERUN_COUNTER = 15 * (1 + (seats >= 4))
+    RERUN_COUNTER = 10 #* (1 + (seats >= 4))
     # How many times should we rerun Algorithm X when we have to remove different sized sets.
-    COUNTER = 15 * (1 + (seats >= 4))
+    COUNTER = 10 #* (1 + (seats >= 4))
     
     n = get_n(df, name_cols)
     r = region.replace(" ", "_")
@@ -225,8 +225,13 @@ def get_solns(const_pairs, const_tris, const_quads, seats, region, max_solns=1e6
     log = custom_logger(log_file_name)
     log.info(f'Starting code for region {region} with {seats} seats.')
     if n % seats == 0:
-        soln_returned, solns, resampled = return_solutions(df, resampled=False, max_soln=max_solns, log_df_name=log_df_name)
-        log.info(f"For n % seats == 0 we have soln_returned={soln_returned} and resampled={resampled}.")
+        try:
+            with timeout(600, exception=RuntimeError): 
+                soln_returned, solns, resampled = return_solutions(df, resampled=False, max_soln=max_solns, log_df_name=log_df_name)
+                log.info(f"For n % seats == 0 we have soln_returned={soln_returned} and resampled={resampled}.")
+        except RuntimeError:
+                log.warning(f"For the {region} region, when we have {seats} seats there is a timeout.")
+                soln_returned = False
         if soln_returned:
             if len(solns) <= 1:
                 log.warning(f"For the {region} region, when we have {seats} seats there are no solutions.")
@@ -236,30 +241,40 @@ def get_solns(const_pairs, const_tris, const_quads, seats, region, max_solns=1e6
                     d = {}
                     d[0] = solns.copy()
                     j = 0
-                    while j < RERUN_COUNTER and soln_returned:
+                    while j <= RERUN_COUNTER and soln_returned:
                         if soln_returned:
                             j += 1
-                            soln_returned, d[j], resampled = return_solutions(df, resampled=True, max_soln=max_solns, log_df_name=log_df_name)
+                            try:
+                                with timeout(600, exception=RuntimeError): 
+                                    soln_returned, d[j], resampled = return_solutions(df, resampled=True, max_soln=max_solns, log_df_name=log_df_name)
+                            except RuntimeError:
+                                    log.warning(f"For the {region} region, when we have {seats} seats there is a timeout.")
+                                    soln_returned = False
                             log.info(f"For j={j} we have soln_returned={soln_returned} and resampled={resampled}.")
-                    if soln_returned:
-                        try:
-                            solns = pd.concat(d, ignore_index=True)
-                        except:
-                            log.warning(f"For region {region} with seats = {seats} we cannot concatenate.")
-                            for k in range(len(d)):
-                                f = f"Logs/check/soln_{r}_{seats}_d_{i}_{k}.csv"
-                                log.warning(f"{k}: {d[k].shape} saved to {f}")
-                                d[k].to_csv(f, index=False)
+                        if soln_returned:
+                            try:
+                                solns = pd.concat(d, ignore_index=True)
+                            except:
+                                log.warning(f"For region {region} with seats = {seats} we cannot concatenate.")
+                                for k in range(len(d)):
+                                    f = f"Logs/check/soln_{r}_{seats}_d_{i}_{k}.csv"
+                                    log.warning(f"{k}: {d[k].shape} saved to {f}")
+                                    d[k].to_csv(f, index=False)
         else:
             log.warning(f"Issue with the {region} region, when we have {seats} seats there are no solutions returned.")
     else:
         # Get the solutions multiple times with different random elements removed.
         soln_dict = {}
         i = 0
-        while i < COUNTER:
+        while i <= COUNTER:
             df, removed = remove_random_const(const_pairs2, const_tris2, const_quads2, seats, region, n)
-            soln_returned, soln_dict[i], resampled = return_solutions(df, resampled=False, max_soln=max_solns, log_df_name=log_df_name)
-            log.info(f"For i={i} we have soln_returned={soln_returned} and resampled={resampled}.")
+            try:
+                with timeout(600, exception=RuntimeError): 
+                    soln_returned, soln_dict[i], resampled = return_solutions(df, resampled=False, max_soln=max_solns, log_df_name=log_df_name)
+                    log.info(f"For i={i} we have soln_returned={soln_returned} and resampled={resampled}.")
+            except RuntimeError:
+                log.warning(f"For the {region} region, when we have {seats} seats there is a timeout.")
+                soln_returned = False
             if soln_returned:
                 if resampled:
                     d = {}
@@ -269,17 +284,23 @@ def get_solns(const_pairs, const_tris, const_quads, seats, region, max_solns=1e6
                     except:
                         log.warning(f"For region {region} with seats = {seats} we cannot get a solution for d[0]")
                     j = 0
-                    while j < RERUN_COUNTER and soln_returned:
+                    while j <= RERUN_COUNTER and soln_returned:
                         if soln_returned:
                             j += 1
-                            soln_returned, d[j], resampled = return_solutions(df, resampled=True, max_soln=max_solns, log_df_name=log_df_name)
-                            log.info(f"For j={j} we have soln_returned={soln_returned} and resampled={resampled}.")
+                            try:
+                                with timeout(600, exception=RuntimeError): 
+                                    soln_returned, d[j], resampled = return_solutions(df, resampled=True, max_soln=max_solns, log_df_name=log_df_name)
+                                    log.info(f"For j={j} we have soln_returned={soln_returned} and resampled={resampled}.")
+                            except RuntimeError:
+                                    log.warning(f"For the {region} region, when we have {seats} seats there is a timeout.")
+                                    soln_returned = False
+#                         else:
+#                             break
+                        if soln_returned:
                             try:
                                 d[j].to_csv(f"Logs/solns/soln_{r}_{seats}_d_{i}_{j}.csv", index=False)
                             except:
                                 log.warning(f"For region {region} with seats = {seats} we cannot get a solution for d[0]")
-                        else:
-                            break
                     if soln_returned:
                         try:
                             soln_dict[i] = pd.concat(d, ignore_index=True)
