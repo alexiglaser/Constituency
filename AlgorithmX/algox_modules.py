@@ -1,33 +1,53 @@
 # Modules used in the calculation of AlgorithmX solutions
 import numpy as np
 import pandas as pd
-from AlgorithmX import *
+from AlgorithmX_timeout import *
 from random import random, sample
 from interruptingcow import timeout
 import sys
 import logging
+TIMEOUT = 90
 
-def const_mapper(df):
+def const_mapper(df, log=None, log_df_name=None):
     """
     As the AlgorithmX code requires inputs starting from zero we shall take all values in the dataframes
     and map them to ints. This function will return the solver required.
     The df is always randomly resampled when we run this so that we get a different initial answer each time.
     """
+#     log.info("Const mapper 1")
     df = df.sample(len(df))
+#     log.info("Const mapper 2")
     name_cols = get_name_cols(df)
+#     log.info("Const mapper 3")
     const_list = np.unique(df[name_cols].stack())
+#     log.info("Const mapper 4")
     n = len(const_list)
+#     log.info("Const mapper 5")
     mapping = {}
+#     log.info("Const mapper 6")
     for i in range(n):
         mapping[const_list[i]] = i
+#     log.info("Const mapper 7")
     for col in name_cols:
         df = df.replace({col: mapping})
-    solver = AlgorithmX(n)
+#     log.info("Const mapper 8")
+    file = log_df_name.replace("Logs/DataFrames", "Logs/check/").replace(".gz", "")
+#     log.info("Const mapper 9")
+    df.to_csv(file, index=False)
+#     log.info("Const mapper 10")
+    solver = AlgorithmX(n, log=log)
+#     log.info("Const mapper 11")
     for index, row in df.iterrows():
-        solver.appendRow([r for r in row[name_cols]], row['set_no'])
+        try:
+            with timeout(TIMEOUT, exception=RuntimeError): 
+                solver.appendRow([r for r in row[name_cols]], row['set_no'], log=log)
+        except RuntimeError:
+            log.info("Failed to create solver")
+            return None
+#     log.info("Const mapper 12")
     return solver
 
-def return_solutions(df, max_soln = 1e7, resampled=False, log_df_name=None):
+def return_solutions(df, max_soln = 1e7, resampled=False, log_df_name=None, log=None):
     """
     This function returns the solutions from the AlgorithmX code.
     prop - states what proportion of the solutions are returned (useful for when they get too big)
@@ -36,43 +56,60 @@ def return_solutions(df, max_soln = 1e7, resampled=False, log_df_name=None):
     """
     max_returned = 2.5e6
     
-    solver = const_mapper(df)
-    solns = 0
-    dict_solns = {}
-    # save a copy of the dataframe used so that is can be investigated if there are issues
     df.to_csv(log_df_name, index=False)
-    try:
-        with timeout(90, exception=RuntimeError): 
-            # Stop calculations if taking too long, either there is no solution or having difficulty finding first one
-            for solution in solver.solve():
-                dict_solns[solns] = solution
-                solns += 1
-                if solns == max_soln:
-                    resampled = True # As we will be rerunning this with a dataframe 'resampled' data frame
-                    break
-            soln_returned = solns > 0
-
-            # If the result is too big take a sample. If the solution is going to be resampled take a small proportion
-            # otherwise take a larger one
-            if soln_returned:
-                if not resampled and solns <= max_returned:
-                    sampled_solns = pd.DataFrame({'soln': dict_solns}).reset_index(drop=True)
-                else:
-                    if not resampled:
-                        keys = sample(list(dict_solns.keys()), max_returned)
+    log.info("Start return_solutions")
+    solver = const_mapper(df, log=log, log_df_name=log_df_name)
+    log.info("After mapper")
+    if solver is not None:
+        solns = 0
+        dict_solns = {}
+        # save a copy of the dataframe used so that is can be investigated if there are issues
+        try:
+            with timeout(TIMEOUT, exception=RuntimeError): 
+                # Stop calculations if taking too long, either there is no solution or having difficulty finding first one\
+                log.info("Starting Algorithmx")
+                for solution in solver.solve(log=log):
+                    dict_solns[solns] = solution
+                    if solution is None:
+                        log.info("Exited with timeout")
+                        solns = 0
+                        break
                     else:
-                        keys = sample(list(dict_solns.keys()), int(max_soln*0.0025))
-                    dict_solns2 = {}
-                    for k in keys:
-                        dict_solns2[k] = dict_solns[k]
-                    sampled_solns = pd.DataFrame({'soln': dict_solns2}).reset_index(drop=True)
-                # Sort out the solutions at this point to save time later.
-                sampled_solns = sampled_solns.assign(soln = [list(np.sort(s)) for s in sampled_solns['soln']])
-                return soln_returned, sampled_solns, resampled
-            else:
-                soln_returned = False
-                return soln_returned, None, None
-    except RuntimeError:
+                        solns += 1
+                        if solns == max_soln:
+                            resampled = True # As we will be rerunning this with a 'resampled' data frame
+                            break
+                soln_returned = solns > 0
+                log.info(f"Finished Algorithmx with soln_returned={soln_returned} and resampled={resampled}")
+
+                # If the result is too big take a sample. If the solution is going to be resampled take a small proportion
+                # otherwise take a larger one
+                if soln_returned:
+                    if not resampled and solns <= max_returned:
+                        sampled_solns = pd.DataFrame({'soln': dict_solns}).reset_index(drop=True)
+                    else:
+                        if not resampled:
+                            keys = sample(list(dict_solns.keys()), max_returned)
+                        else:
+                            keys = sample(list(dict_solns.keys()), int(max_soln*0.0025))
+                        dict_solns2 = {}
+                        for k in keys:
+                            dict_solns2[k] = dict_solns[k]
+                        sampled_solns = pd.DataFrame({'soln': dict_solns2}).reset_index(drop=True)
+                    # Sort out the solutions at this point to save time later.
+                    log.info("Sampled solutions obtained")
+                    sampled_solns = sampled_solns.assign(soln = [list(np.sort(s)) for s in sampled_solns['soln']])
+                    log.info("Sampled solutions sorted")
+                    return soln_returned, sampled_solns, resampled
+                else:
+#                     soln_returned = False
+                    return soln_returned, None, None
+        except RuntimeError:
+            log.info("Algorithm took too long")
+            soln_returned = False
+            return soln_returned, None, None
+    else:
+        log.info("Mapper took too long")
         soln_returned = False
         return soln_returned, None, None
         
@@ -213,9 +250,10 @@ def get_solns(const_pairs, const_tris, const_quads, seats, region, max_solns=1e6
         df = const_quads2
     name_cols = get_name_cols(df)
     # How many times should we rerun Algorithm X when we cannot return all solutions.
-    RERUN_COUNTER = 10 #* (1 + (seats >= 4))
+    RERUN_COUNTER = 5 #* (1 + (seats >= 4))
     # How many times should we rerun Algorithm X when we have to remove different sized sets.
-    COUNTER = 10 #* (1 + (seats >= 4))
+    COUNTER = 5 #* (1 + (seats >= 4))
+    LONG_TIMEOUT = 180
     
     n = get_n(df, name_cols)
     r = region.replace(" ", "_")
@@ -226,14 +264,14 @@ def get_solns(const_pairs, const_tris, const_quads, seats, region, max_solns=1e6
     log.info(f'Starting code for region {region} with {seats} seats.')
     if n % seats == 0:
         try:
-            with timeout(600, exception=RuntimeError): 
-                soln_returned, solns, resampled = return_solutions(df, resampled=False, max_soln=max_solns, log_df_name=log_df_name)
+            with timeout(LONG_TIMEOUT, exception=RuntimeError): 
+                soln_returned, solns, resampled = return_solutions(df, resampled=False, max_soln=max_solns, log_df_name=log_df_name, log=log)
                 log.info(f"For n % seats == 0 we have soln_returned={soln_returned} and resampled={resampled}.")
         except RuntimeError:
                 log.warning(f"For the {region} region, when we have {seats} seats there is a timeout.")
                 soln_returned = False
         if soln_returned:
-            if len(solns) <= 1:
+            if len(solns) <= 1 or solns is None:
                 log.warning(f"For the {region} region, when we have {seats} seats there are no solutions.")
             else:
                 # If we're unable to get all solutions rerun multiple times to get a further subset of them.
@@ -241,25 +279,25 @@ def get_solns(const_pairs, const_tris, const_quads, seats, region, max_solns=1e6
                     d = {}
                     d[0] = solns.copy()
                     j = 0
-                    while j <= RERUN_COUNTER and soln_returned:
-                        if soln_returned:
-                            j += 1
-                            try:
-                                with timeout(600, exception=RuntimeError): 
-                                    soln_returned, d[j], resampled = return_solutions(df, resampled=True, max_soln=max_solns, log_df_name=log_df_name)
-                            except RuntimeError:
-                                    log.warning(f"For the {region} region, when we have {seats} seats there is a timeout.")
-                                    soln_returned = False
-                            log.info(f"For j={j} we have soln_returned={soln_returned} and resampled={resampled}.")
-                        if soln_returned:
-                            try:
-                                solns = pd.concat(d, ignore_index=True)
-                            except:
-                                log.warning(f"For region {region} with seats = {seats} we cannot concatenate.")
-                                for k in range(len(d)):
-                                    f = f"Logs/check/soln_{r}_{seats}_d_{i}_{k}.csv"
-                                    log.warning(f"{k}: {d[k].shape} saved to {f}")
-                                    d[k].to_csv(f, index=False)
+                    while j < RERUN_COUNTER: # and soln_returned:
+                        log.info(f"At j = {j}.") # with soln_returned = {soln_returned}.")
+                        try:
+                            with timeout(LONG_TIMEOUT, exception=RuntimeError): 
+                                soln_returned, d[j], resampled = return_solutions(df, resampled=True, max_soln=max_solns, log_df_name=log_df_name, log=log)
+                        except RuntimeError:
+                                log.warning(f"For the {region} region, when we have {seats} seats there is a timeout.")
+                                soln_returned = False
+                        log.info(f"For j={j} we have soln_returned={soln_returned} and resampled={resampled}.")
+                        j += 1
+                    if soln_returned:
+                        try:
+                            solns = pd.concat(d, ignore_index=True)
+                        except:
+                            log.warning(f"For region {region} with seats = {seats} we cannot concatenate.")
+                            for k in range(len(d)):
+                                f = f"Logs/check/soln_{r}_{seats}_d_{i}_{k}.csv"
+                                log.warning(f"{k}: {d[k].shape} saved to {f}")
+                                d[k].to_csv(f, index=False)
         else:
             log.warning(f"Issue with the {region} region, when we have {seats} seats there are no solutions returned.")
     else:
@@ -269,8 +307,8 @@ def get_solns(const_pairs, const_tris, const_quads, seats, region, max_solns=1e6
         while i <= COUNTER:
             df, removed = remove_random_const(const_pairs2, const_tris2, const_quads2, seats, region, n)
             try:
-                with timeout(600, exception=RuntimeError): 
-                    soln_returned, soln_dict[i], resampled = return_solutions(df, resampled=False, max_soln=max_solns, log_df_name=log_df_name)
+                with timeout(LONG_TIMEOUT, exception=RuntimeError): 
+                    soln_returned, soln_dict[i], resampled = return_solutions(df, resampled=False, max_soln=max_solns, log_df_name=log_df_name, log=log)
                     log.info(f"For i={i} we have soln_returned={soln_returned} and resampled={resampled}.")
             except RuntimeError:
                 log.warning(f"For the {region} region, when we have {seats} seats there is a timeout.")
@@ -284,24 +322,28 @@ def get_solns(const_pairs, const_tris, const_quads, seats, region, max_solns=1e6
                     except:
                         log.warning(f"For region {region} with seats = {seats} we cannot get a solution for d[0]")
                     j = 0
-                    while j <= RERUN_COUNTER and soln_returned:
+                    while j < RERUN_COUNTER: # and soln_returned:
+                        log.info(f"At j = {j}.") # with soln_returned = {soln_returned}.")
+                        try:
+                            with timeout(LONG_TIMEOUT, exception=RuntimeError): 
+                                log.info("Before getting solutions.")
+                                soln_returned, d[j], resampled = return_solutions(df, resampled=True, max_soln=max_solns, log_df_name=log_df_name, log=log)
+                                log.info(f"For j={j} we have soln_returned={soln_returned} and resampled={resampled}.")
+                        except RuntimeError:
+                                log.warning(f"For the {region} region, when we have {seats} seats there is a timeout.")
+                                soln_returned = False
                         if soln_returned:
-                            j += 1
-                            try:
-                                with timeout(600, exception=RuntimeError): 
-                                    soln_returned, d[j], resampled = return_solutions(df, resampled=True, max_soln=max_solns, log_df_name=log_df_name)
-                                    log.info(f"For j={j} we have soln_returned={soln_returned} and resampled={resampled}.")
-                            except RuntimeError:
-                                    log.warning(f"For the {region} region, when we have {seats} seats there is a timeout.")
-                                    soln_returned = False
-#                         else:
-#                             break
-                        if soln_returned:
+                            log.info(f"Need to write file to Logs/solns/soln_{r}_{seats}_d_{i}_{j}.csv")
+                            log.info(f"Solution is of size {d[j].shape}")
                             try:
                                 d[j].to_csv(f"Logs/solns/soln_{r}_{seats}_d_{i}_{j}.csv", index=False)
                             except:
-                                log.warning(f"For region {region} with seats = {seats} we cannot get a solution for d[0]")
+                                log.warning(f"For region {region} with seats = {seats} we cannot get a solution for d[{j}]")
+                            log.info(f"Finished writing file to Logs/solns/soln_{r}_{seats}_d_{i}_{j}.csv")
+                            j += 1
+                    log.info(f"Finished finding solutions for region {region} with {seats} seats having soln_returned = {soln_returned}.")
                     if soln_returned:
+                        log.info(f"Before concatenation.")
                         try:
                             soln_dict[i] = pd.concat(d, ignore_index=True)
                         except:
