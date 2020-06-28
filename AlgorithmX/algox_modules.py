@@ -7,6 +7,8 @@ from interruptingcow import timeout
 import sys
 import logging
 TIMEOUT = 90
+import random
+random.seed(1000)
 
 def const_mapper(df, log=None, log_df_name=None):
     """
@@ -14,29 +16,18 @@ def const_mapper(df, log=None, log_df_name=None):
     and map them to ints. This function will return the solver required.
     The df is always randomly resampled when we run this so that we get a different initial answer each time.
     """
-#     log.info("Const mapper 1")
     df = df.sample(len(df))
-#     log.info("Const mapper 2")
     name_cols = get_name_cols(df)
-#     log.info("Const mapper 3")
     const_list = np.unique(df[name_cols].stack())
-#     log.info("Const mapper 4")
     n = len(const_list)
-#     log.info("Const mapper 5")
     mapping = {}
-#     log.info("Const mapper 6")
     for i in range(n):
         mapping[const_list[i]] = i
-#     log.info("Const mapper 7")
     for col in name_cols:
         df = df.replace({col: mapping})
-#     log.info("Const mapper 8")
     file = log_df_name.replace("Logs/DataFrames", "Logs/check/").replace(".gz", "")
-#     log.info("Const mapper 9")
     df.to_csv(file, index=False)
-#     log.info("Const mapper 10")
     solver = AlgorithmX(n, log=log)
-#     log.info("Const mapper 11")
     for index, row in df.iterrows():
         try:
             with timeout(TIMEOUT, exception=RuntimeError): 
@@ -44,7 +35,6 @@ def const_mapper(df, log=None, log_df_name=None):
         except RuntimeError:
             log.info("Failed to create solver")
             return None
-#     log.info("Const mapper 12")
     return solver
 
 def return_solutions(df, max_soln = 1e7, resampled=False, log_df_name=None, log=None):
