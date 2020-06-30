@@ -1,8 +1,8 @@
 # Modules used in the calculation of AlgorithmX solutions
 import numpy as np
 import pandas as pd
-from AlgorithmX_timeout import *
-from random import random, sample
+from AlgorithmX import *
+from random import sample
 from interruptingcow import timeout
 import sys
 import logging
@@ -16,7 +16,7 @@ def const_mapper(df, log=None, log_df_name=None):
     and map them to ints. This function will return the solver required.
     The df is always randomly resampled when we run this so that we get a different initial answer each time.
     """
-    df = df.sample(len(df))
+    df = df.sample(len(df), random_state = int(random.random()*100000))
     name_cols = get_name_cols(df)
     const_list = np.unique(df[name_cols].stack())
     n = len(const_list)
@@ -27,14 +27,21 @@ def const_mapper(df, log=None, log_df_name=None):
         df = df.replace({col: mapping})
     file = log_df_name.replace("Logs/DataFrames", "Logs/check/").replace(".gz", "")
     df.to_csv(file, index=False)
-    solver = AlgorithmX(n, log=log)
+    log.info("Written to csv")
+    solver = AlgorithmX(n)
+    log.info("Before for")
+    k = 0
     for index, row in df.iterrows():
+        k += 1
         try:
             with timeout(TIMEOUT, exception=RuntimeError): 
-                solver.appendRow([r for r in row[name_cols]], row['set_no'], log=log)
+                if k % 100 == 0:
+                    log.info(index)
+                solver.appendRow([r for r in row[name_cols]], row['set_no'])
         except RuntimeError:
             log.info("Failed to create solver")
-            return None
+            solver = None
+    log.info("Ended for loop")
     return solver
 
 def return_solutions(df, max_soln = 1e7, resampled=False, log_df_name=None, log=None):
@@ -58,7 +65,7 @@ def return_solutions(df, max_soln = 1e7, resampled=False, log_df_name=None, log=
             with timeout(TIMEOUT, exception=RuntimeError): 
                 # Stop calculations if taking too long, either there is no solution or having difficulty finding first one\
                 log.info("Starting Algorithmx")
-                for solution in solver.solve(log=log):
+                for solution in solver.solve():
                     dict_solns[solns] = solution
                     if solution is None:
                         log.info("Exited with timeout")
@@ -156,7 +163,7 @@ def remove_random_const(const_pairs, const_tris, const_quads, seats, region, n):
     if seats == 2:
         while n2 % seats != 0:
             df = const_pairs.copy()
-            random_const = const_tris.sample(1)
+            random_const = const_tris.sample(1, random_state=int(random.random()*1000000))
             removed['triplet'] = random_const['set_no'].iloc[0]
             to_remove = to_remove_names(random_const)
             df = remove_consts(df, to_remove, name_cols)
@@ -165,11 +172,11 @@ def remove_random_const(const_pairs, const_tris, const_quads, seats, region, n):
         while n2 % seats != 0:
             df = const_tris.copy()
             if (seats == 3) & (n % seats == 1):
-                random_const = const_quads.sample(1)
+                random_const = const_quads.sample(1, random_state=int(random.random()*1000000))
                 removed['quad'] = random_const['set_no'].iloc[0]
                 to_remove = to_remove_names(random_const)
             elif (seats == 3) & (n % seats == 2):
-                random_const = const_pairs.sample(1)
+                random_const = const_pairs.sample(1, random_state=int(random.random()*1000000))
                 removed['pair'] = random_const['set_no'].iloc[0]
                 to_remove = to_remove_names(random_const)
             df = remove_consts(df, to_remove, name_cols)
@@ -189,7 +196,7 @@ def remove_random_const(const_pairs, const_tris, const_quads, seats, region, n):
                     trips = 2
                 to_remove = []
                 for i in range(trips):
-                    random_const = df2.sample(1)
+                    random_const = df2.sample(1, random_state=int(random.random()*1000000))
                     if i == 0:
                         removed['triplet'] = [random_const['set_no'].iloc[0]]
                     else:
@@ -199,7 +206,7 @@ def remove_random_const(const_pairs, const_tris, const_quads, seats, region, n):
                 for name in name_cols2:
                     df2 = df2[~df2[name].isin(to_remove)]
             elif n % seats == 3:
-                random_const = const_tris.sample(1)
+                random_const = const_tris.sample(1, random_state=int(random.random()*1000000))
                 removed['triplet'] = random_const['set_no'].iloc[0]
                 to_remove = to_remove_names(random_const)
             df = remove_consts(df, to_remove, name_cols)
