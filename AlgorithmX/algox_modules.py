@@ -134,8 +134,22 @@ def remove_random_const(const_pairs, const_tris, const_quads, seats, region, n):
     elif seats == 4:
         name_cols = get_name_cols(const_quads)
     removed = {}
+    # How many constituencies are removed to make the number remaining divisbile by 'seats'?
     if seats == 2:
-        while n2 % seats != 0:
+        n3 = n2 - 3
+    elif (seats == 3) & (n % seats == 1):
+        n3 = n2 - 4
+    elif (seats == 3) & (n % seats == 2):
+        n3 = n2 - 2
+    elif seats == 4:
+        if n % seats == 1:
+            n3 = n2 - 9 # Three triplets are removed
+        elif n % seats == 2:
+            n3 = n2 - 6 # Two triplets are removed
+        elif n % seats == 3:
+            n3 = n2 - 3
+    if seats == 2:
+        while n3 != n2:
             df = const_pairs.copy()
             random_const = const_tris.sample(1, random_state=int(random.random()*1000000))
             removed['triplet'] = random_const['set_no'].iloc[0]
@@ -143,7 +157,7 @@ def remove_random_const(const_pairs, const_tris, const_quads, seats, region, n):
             df = remove_consts(df, to_remove, name_cols)
             n2 = get_n(df, name_cols)
     elif seats == 3:
-        while n2 % seats != 0:
+        while n3 != n2:
             df = const_tris.copy()
             if (seats == 3) & (n % seats == 1):
                 random_const = const_quads.sample(1, random_state=int(random.random()*1000000))
@@ -156,7 +170,7 @@ def remove_random_const(const_pairs, const_tris, const_quads, seats, region, n):
             df = remove_consts(df, to_remove, name_cols)
             n2 = get_n(df, name_cols)
     elif seats == 4:
-        while n2 % seats != 0:
+        while n3 != n2:
             df = const_quads.copy()
             # Need to ensure that when we remove multiple triplets that none of the elements are repeated
             if (n % seats == 2) or (n % seats == 1):
