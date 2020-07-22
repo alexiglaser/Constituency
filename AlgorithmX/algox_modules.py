@@ -151,7 +151,7 @@ def remove_random_const(const_pairs, const_tris, const_quads, seats, region, n):
     if seats == 2:
         while n3 != n2:
             df = const_pairs.copy()
-            random_const = const_tris.sample(1, random_state=int(random.random()*1000000))
+            random_const = const_tris.sample(1)
             removed['triplet'] = random_const['set_no'].iloc[0]
             to_remove = to_remove_names(random_const)
             df = remove_consts(df, to_remove, name_cols)
@@ -160,11 +160,11 @@ def remove_random_const(const_pairs, const_tris, const_quads, seats, region, n):
         while n3 != n2:
             df = const_tris.copy()
             if (seats == 3) & (n % seats == 1):
-                random_const = const_quads.sample(1, random_state=int(random.random()*1000000))
+                random_const = const_quads.sample(1)
                 removed['quad'] = random_const['set_no'].iloc[0]
                 to_remove = to_remove_names(random_const)
             elif (seats == 3) & (n % seats == 2):
-                random_const = const_pairs.sample(1, random_state=int(random.random()*1000000))
+                random_const = const_pairs.sample(1)
                 removed['pair'] = random_const['set_no'].iloc[0]
                 to_remove = to_remove_names(random_const)
             df = remove_consts(df, to_remove, name_cols)
@@ -184,17 +184,18 @@ def remove_random_const(const_pairs, const_tris, const_quads, seats, region, n):
                     trips = 2
                 to_remove = []
                 for i in range(trips):
-                    random_const = df2.sample(1, random_state=int(random.random()*1000000))
+                    random_const = df2.sample(1)
                     if i == 0:
                         removed['triplet'] = [random_const['set_no'].iloc[0]]
                     else:
                         removed['triplet'] = [*removed['triplet'], random_const['set_no'].iloc[0]]
                     to_remove = to_remove + to_remove_names(random_const)
+                    # Make sure we only remove applicable sets 
+                    for name in name_cols2:
+                        df2 = df2[~df2[name].isin(to_remove)]
                 removed['triplet'] = list(np.sort(removed['triplet']))
-                for name in name_cols2:
-                    df2 = df2[~df2[name].isin(to_remove)]
             elif n % seats == 3:
-                random_const = const_tris.sample(1, random_state=int(random.random()*1000000))
+                random_const = const_tris.sample(1)
                 removed['triplet'] = random_const['set_no'].iloc[0]
                 to_remove = to_remove_names(random_const)
             df = remove_consts(df, to_remove, name_cols)
