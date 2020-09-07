@@ -121,7 +121,7 @@ def get_name_cols(df):
     """
     return df.columns[df.columns.str.startswith('name')]
 
-def remove_random_const(const_pairs, const_tris, const_quads, seats, region, n):
+def remove_random_const(const_pairs, const_tris, const_quads, seats, region, n, log):
     """
     This function removes randomly selected pairs / triplets / quadruplets to make sure
     that the number of constituencies left are divisble by the number of seats.
@@ -134,29 +134,46 @@ def remove_random_const(const_pairs, const_tris, const_quads, seats, region, n):
     elif seats == 4:
         name_cols = get_name_cols(const_quads)
     removed = {}
+    # How many constituencies are removed to make the number remaining divisbile by 'seats'?
     if seats == 2:
-        while n2 % seats != 0:
+        n3 = n2 - 3
+    elif (seats == 3) & (n % seats == 1):
+        n3 = n2 - 4
+    elif (seats == 3) & (n % seats == 2):
+        n3 = n2 - 2
+    elif seats == 4:
+        if n % seats == 1:
+            n3 = n2 - 9 # Three triplets are removed
+        elif n % seats == 2:
+            n3 = n2 - 6 # Two triplets are removed
+        elif n % seats == 3:
+            n3 = n2 - 3
+    if seats == 2:
+        while n3 != n2:
             df = const_pairs.copy()
-            random_const = const_tris.sample(1, random_state=int(random.random()*1000000))
+            random_const = const_tris.sample(1)
+            log.info(f"Removed {random_const['set_no']} from const_tris")
             removed['triplet'] = random_const['set_no'].iloc[0]
             to_remove = to_remove_names(random_const)
             df = remove_consts(df, to_remove, name_cols)
             n2 = get_n(df, name_cols)
     elif seats == 3:
-        while n2 % seats != 0:
+        while n3 != n2:
             df = const_tris.copy()
             if (seats == 3) & (n % seats == 1):
-                random_const = const_quads.sample(1, random_state=int(random.random()*1000000))
+                random_const = const_quads.sample(1)
+                log.info(f"Removed {random_const['set_no']} from const_quads")
                 removed['quad'] = random_const['set_no'].iloc[0]
                 to_remove = to_remove_names(random_const)
             elif (seats == 3) & (n % seats == 2):
-                random_const = const_pairs.sample(1, random_state=int(random.random()*1000000))
+                random_const = const_pairs.sample(1)
+                log.info(f"Removed {random_const['set_no']} from const_pairs")
                 removed['pair'] = random_const['set_no'].iloc[0]
                 to_remove = to_remove_names(random_const)
             df = remove_consts(df, to_remove, name_cols)
             n2 = get_n(df, name_cols)
     elif seats == 4:
-        while n2 % seats != 0:
+        while n3 != n2:
             df = const_quads.copy()
             # Need to ensure that when we remove multiple triplets that none of the elements are repeated
             if (n % seats == 2) or (n % seats == 1):
@@ -170,19 +187,21 @@ def remove_random_const(const_pairs, const_tris, const_quads, seats, region, n):
                     trips = 2
                 to_remove = []
                 for i in range(trips):
-                    random_const = df2.sample(1, random_state=int(random.random()*1000000))
+                    random_const = df2.sample(1)
                     if i == 0:
                         removed['triplet'] = [random_const['set_no'].iloc[0]]
                     else:
                         removed['triplet'] = [*removed['triplet'], random_const['set_no'].iloc[0]]
                     to_remove = to_remove + to_remove_names(random_const)
+                    # Make sure we only remove applicable sets 
+                    for name in name_cols2:
+                        df2 = df2[~df2[name].isin(to_remove)]
                 removed['triplet'] = list(np.sort(removed['triplet']))
-                for name in name_cols2:
-                    df2 = df2[~df2[name].isin(to_remove)]
             elif n % seats == 3:
-                random_const = const_tris.sample(1, random_state=int(random.random()*1000000))
+                random_const = const_tris.sample(1)
                 removed['triplet'] = random_const['set_no'].iloc[0]
                 to_remove = to_remove_names(random_const)
+            log.info(f"Removed {removed['triplet']} from const_quads")
             df = remove_consts(df, to_remove, name_cols)
             n2 = get_n(df, name_cols)
 
@@ -271,7 +290,7 @@ def get_solns(const_pairs, const_tris, const_quads, seats, region, max_solns=1e6
         i = 0
         while i < COUNTER:
             log.info(f"At i = {i}.")
-            df, removed = remove_random_const(const_pairs2, const_tris2, const_quads2, seats, region, n)
+            df, removed = remove_random_const(const_pairs2, const_tris2, const_quads2, seats, region, n, log)
             try:
                 with timeout(LONG_TIMEOUT, exception=RuntimeError): 
                     soln_returned, soln_dict[i], resampled = return_solutions(df, resampled=False, max_soln=max_solns, log=log)
