@@ -1,5 +1,4 @@
-# To use with the data science stuff
-# FROM jupyter/base-notebook:latest
+# To use a PyPy kernel
 FROM giodegas/pypy-jupyter:latest
 
 # need to be root to install system packages
