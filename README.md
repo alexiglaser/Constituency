@@ -35,3 +35,5 @@ Resources used in this project:
 1. The shapefiles were obtained from [data.gov.uk](https://data.gov.uk/dataset/09762279-a9cf-49ce-b035-809c91ba4214/westminster-parliamentary-constituencies-december-2017-uk-bfc).
 1. Election results were taken from the R package [`parlitools`](https://github.com/evanodell/parlitools).
 1. David Goodger [code](http://puzzler.sourceforge.net/puzzler/exact_cover_dlx.py) and Bjarki Ágúst Guðmundsson [code](https://github.com/SuprDewd/algorithm_x_python) to implement Knuth's Algorithm X.
+
+Final results are given in the pdf presentation in the 'Analysis' folder (which was presented at PyData Global 2020).
