@@ -2,7 +2,7 @@
 
 ## Proportional representation of UK constituencies
 
-The idea behind this project is to see how a proportional representation (PR) system would have altered results in the last UK general election. The plan is to merge neighbouring constituencies in the UK into 'super' constituencies with 2 / 3 / 4 / etc of them merged together into a larger one and use the [D'Hondt](https://en.wikipedia.org/wiki/D%27Hondt_method) method to allocate seats in this 'super' constituency.
+The idea behind this project is to see how a proportional representation (PR) system would have altered results in the 2019 UK general election. The plan is to merge neighbouring constituencies in the UK into 'super' constituencies with 2 / 3 / 4 / etc of them merged together into a larger one and use the [D'Hondt](https://en.wikipedia.org/wiki/D%27Hondt_method) method to allocate seats in this 'super' constituency.
 
 ### Motivation
 After the 2019 UK general election an article appeared in [Wales online](https://www.walesonline.co.uk/news/politics/proportional-representation-general-election-votes-17414366?_ga=2.214928336.650232768.1586343291-62203819.1586343291) suggesting that if the UK adopted a PR system the seat allocation of parliament would look as follows:
